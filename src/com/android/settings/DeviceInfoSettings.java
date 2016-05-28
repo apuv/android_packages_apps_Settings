@@ -89,6 +89,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_MOD_BUILD_DATE = "build_date";
     private static final String KEY_MOD_API_LEVEL = "mod_api_level";
     private static final String KEY_CM_UPDATES = "cm_updates";
+    private static final String KEY_DELTA_UPDATES = "delta_updates";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
@@ -164,6 +165,13 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         } else {
             getPreferenceScreen().removePreference(findPreference(KEY_CM_UPDATES));
         }
+        
+        // Only the owner should see the Updater settings, if it exists
+        if (UserHandle.myUserId() == UserHandle.USER_OWNER) {
+            removePreferenceIfPackageNotInstalled(findPreference(KEY_DELTA_UPDATES));
+        } else {
+            getPreferenceScreen().removePreference(findPreference(KEY_DELTA_UPDATES));
+        }        
 
         // Remove Safety information preference if PROPERTY_URL_SAFETYLEGAL is not set
         removePreferenceIfPropertyMissing(getPreferenceScreen(), KEY_SAFETY_LEGAL,
