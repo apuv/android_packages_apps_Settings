@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.darkobas;
+package com.android.settings.yacmr;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -31,7 +31,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class RemixChangelog extends Fragment {
-    private static final String CHANGELOG_PATH = "/system/etc/changelog.txt";
+    private static final String CHANGELOG_PATH = "/system/etc/CHANGELOG-CM.txt";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
