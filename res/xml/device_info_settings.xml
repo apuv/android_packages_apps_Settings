@@ -50,7 +50,6 @@
 -->        
         
         <!-- OpenDelta Updates -->
-<!--        
         <PreferenceScreen android:key="delta_updates"
                 android:title="@string/deltaupdate_settings_title"
                 android:summary="@string/system_update_settings_list_item_summary">
@@ -59,8 +58,6 @@
                     android:targetClass="eu.chainfire.opendelta.MainActivity"
                     />
         </PreferenceScreen>
--->        
-        
 
         <!-- Change Log -->
         <PreferenceScreen android:key="changelog"
