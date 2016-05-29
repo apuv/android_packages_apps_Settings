@@ -7057,5 +7057,7 @@
     
     <!--ChangeLog-->
     <string name ="changelog_title">ChangeLog</string>
+    <string name ="changelog_error">ChangeLog not found</string>
+    
  
 </resources>
