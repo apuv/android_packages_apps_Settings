@@ -30,7 +30,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class RemixChangelog extends Fragment {
+public class yacmrChangelog extends Fragment {
     private static final String CHANGELOG_PATH = "/system/etc/CHANGELOG-CM.txt";
 
     @Override
