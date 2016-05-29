@@ -53,7 +53,7 @@
                 android:summary="@string/system_update_settings_list_item_summary">
             <intent android:action="android.intent.action.MAIN"
                     android:targetPackage="eu.chainfire.opendelta"
-                    android:targetClass="eu.chainfire.opendelta.Shortcut" />
+                    android:targetClass="eu.chainfire.opendelta.SettingsActivity" />
         </PreferenceScreen>        
 
         <!-- Device status - launches activity -->
