@@ -56,12 +56,6 @@
                     android:targetClass="eu.chainfire.opendelta.SettingsActivity" />
         </PreferenceScreen>        
         
-        <!-- Change Log -->
-        <PreferenceScreen android:key="changelog"
-            android:title="@string/changelog_title"
-            android:fragment="com.android.settings.yacmr.yacmrChangelog" >
-        </PreferenceScreen>
-
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"
                 android:title="@string/device_status"
