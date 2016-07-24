@@ -544,7 +544,7 @@
   <!-- Volume settings - Volume adjustment sound -->
   <string name="volume_adjust_sounds_title">Звук при регулиране на силата на звука</string>
   <!-- Hardware tunables - Vibrator intensity -->
-  <string name="vibrator_intensity_title">Честота на вибрацията</string>
+  <string name="vibrator_intensity_title">Мощност на вибрация</string>
   <string name="vibrator_warning">Стойности по-високи от %1$d не се препоръчват</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">Калибриране на цвета</string>
@@ -1063,4 +1063,11 @@
   <string name="cm_radio_info_diag_log_on_label">Изключване не Diag log</string>
   <string name="cm_radio_info_diag_log_off_label">Включване на Diag log</string>
   <string name="not_available_with_app">Не се предлага с %1$s</string>
+  <!-- Format string for fingerprint location message -->
+  <string name="security_settings_fingerprint_enroll_find_sensor_message_cm">Намерете сензора за пръстови отпечатъци <xliff:g id="sensor_location">%1$s </xliff:g> на вашия телефон.</string>
+  <!-- Fingerprint sensor locations -->
+  <string name="security_settings_fingerprint_sensor_location_back">Отзад</string>
+  <string name="security_settings_fingerprint_sensor_location_front">Отпред</string>
+  <string name="security_settings_fingerprint_sensor_location_left">Лява страна</string>
+  <string name="security_settings_fingerprint_sensor_location_right">Дясна страна</string>
 </resources>
