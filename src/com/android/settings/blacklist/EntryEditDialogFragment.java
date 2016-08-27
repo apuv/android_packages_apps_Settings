@@ -90,8 +90,6 @@ public class EntryEditDialogFragment extends DialogFragment
 
     private static final String DELETE_CONFIRM_FRAGMENT_TAG = "delete_confirm";
 
-    private static final String DELETE_CONFIRM_FRAGMENT_TAG = "delete_confirm";
-
     public static EntryEditDialogFragment newInstance(long id) {
         Bundle args = new Bundle();
         args.putLong("id", id);
