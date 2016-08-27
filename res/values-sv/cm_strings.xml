@@ -38,6 +38,7 @@
   <string name="root_access_apps">Endast appar</string>
   <string name="root_access_adb">Endast ADB</string>
   <string name="root_access_all">Appar och ADB</string>
+  <!-- Preference link for root appops -->
   <!-- NFC PreferenceCategory title -->
   <string name="nfc_title_category">NFC</string>
   <!-- About phone screen, CyanogenMod version -->
@@ -54,6 +55,7 @@
   <string name="build_date">Byggdatum</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">CyanogenMod-uppdateringar</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">Uppdatera Cyanogen Recovery</string>
   <string name="update_recovery_summary">Uppdatera Recovery med systemuppdateringar</string>
@@ -528,6 +530,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">Aktivera navigeringsfält på skärmen</string>
   <string name="disable_navkeys_summary">Aktivera navigeringsfält på skärmen och inaktivera hårdvaruknappar</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">Dubbeltryck för att väcka</string>
+  <string name="double_tap_to_wake_summary">Dubbeltryck på skärmen för att slå på displayen</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">Dubbeltryck för att släcka</string>
   <string name="double_tap_to_sleep_summary">Dubbeltryck på statusfältet för att stänga av skärmen</string>
@@ -544,21 +549,12 @@
   <string name="volume_adjust_sounds_title">Ljud vid volymjustering</string>
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">Vibratorintensitet</string>
-  <string name="vibrator_warning">Värden högre än %1$d är inte rekommenderade</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">Färgkalibrering</string>
   <string name="color_calibration_summary">Kalibrera skärmfärger</string>
   <string name="color_red_title">Röd</string>
   <string name="color_green_title">Grön</string>
   <string name="color_blue_title">Blå</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">Gammakalibrering</string>
-  <string name="gamma_tuning_summary_head">Justera gammavärden</string>
-  <string name="gamma_tuning_control_set_header">Grupp <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">Kontrast</string>
-  <string name="gamma_tuning_brightness">Ljusstyrka</string>
-  <string name="gamma_tuning_saturation">Mättnad</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">Öppna musikapp</string>
   <string name="headset_connect_player_summary">Öppna standardmusikapp när hörlurar kopplas in</string>
@@ -575,23 +571,6 @@
   <string name="display_rotation_90_title">90 grader</string>
   <string name="display_rotation_180_title">180 grader</string>
   <string name="display_rotation_270_title">270 grader</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">Skärmfärg</string>
-  <string name="screencolor_summary">Ställ in skärmnyans, mättnad, kontrast eller intensitet</string>
-  <string name="custom_screencolor">Anpassad skärmfärg</string>
-  <string name="screencolor_save">Spara</string>
-  <string name="screencolor_cancel">Avbryt</string>
-  <string name="restore_preview">Visa standardbild</string>
-  <string name="selectnewfile_menu">Visa ny bild från galleriet</string>
-  <string name="selectfile_menu">Visa bild från galleriet</string>
-  <string name="restore_default_str">Återställ</string>
-  <string name="hue_str">Nyans: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">Mättnad: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">Kontrast: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">Intensitet: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">Standard</string>
-  <string name="screen_color_vivid">Levande</string>
-  <string name="screen_color_custom">Anpassad</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">Optimera din skärm baserad på dygnets tidpunkt och omgivande förhållanden för att förbättra läsbarhet och minska belastningen på ögonen</string>
   <string name="live_display_mode">Visningsläge</string>
@@ -621,6 +600,9 @@
   <string name="live_display_color_profile_photography_summary">Perfekt färgåtergivning för bilder</string>
   <string name="live_display_color_profile_basic_title">Grundläggande</string>
   <string name="live_display_color_profile_basic_summary">Använd skärmen okalibrerad</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="adj_saturation_title">Mättnad</string>
+  <string name="adj_contrast_title">Kontrast</string>
   <!-- Whether to display IME switcher notifcation -->
   <string name="ime_switcher_notify">Väljarikonen</string>
   <string name="ime_switcher_notify_summary">Visa ikonen för inmatningsväxlare</string>
@@ -1029,6 +1011,10 @@ inkluderar en unik identifikation,
   <string name="allow_background_wlan">Endast över Wi\u2011Fi</string>
   <string name="allow_background_none">Ingen åtkomst</string>
   <string name="reset_stats_confirm">Bekräfta</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <!-- title for lock screen blur preference -->
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">Visa väder</string>
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">Visa på låsskärmen</string>
   <string name="app_notification_show_on_keyguard_summary">Visa aviseringar från denna app på låsskärmen</string>
@@ -1036,6 +1022,7 @@ inkluderar en unik identifikation,
   <string name="app_notification_no_ongoing_on_keyguard_summary">Visa aldrig beständiga aviseringar från denna app på låsskärmen</string>
   <!-- CmRadioInfo -->
   <!-- Radio Control (IMS/MBN etc.) -->
+  <!-- Lock screen wallpaper -->
   <!-- Format string for fingerprint location message -->
   <!-- Fingerprint sensor locations -->
   <!-- SIM status format string -->

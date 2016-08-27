@@ -37,6 +37,7 @@
   <string name="root_access_apps">Yalnız tətbiqetmələr</string>
   <string name="root_access_adb">Yalnız ADB</string>
   <string name="root_access_all">Tətbiqetmələr və ADB</string>
+  <!-- Preference link for root appops -->
   <!-- NFC PreferenceCategory title -->
   <!-- About phone screen, CyanogenMod version -->
   <string name="mod_version">CyanogenMod versiyası</string>
@@ -51,6 +52,7 @@
   <string name="build_date">Quruluş tarixi</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">CyanogenMod yeniləmələri</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">Cyanogen bərpa rejimini yenilə</string>
   <string name="update_recovery_summary">Sistem yeniləməsi ilə bərpa rejimini yenilə</string>
@@ -430,6 +432,9 @@
   <string name="power_menu_bug_report_disabled">Xəta hesabatı tərtibatçı tənzimləmələrində ləğv edildi</string>
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_summary">Ekran üstü hərəkət zolağını fəallaşdır və avadanlıq düymələri ləğv et</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">Oyanmaq üçün iki dəfə toxun</string>
+  <string name="double_tap_to_wake_summary">Ekranı açmaq üçün ekrana iki dəfə toxunun</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">Yuxuya keçmək üçün iki dəfə toxun</string>
   <string name="double_tap_to_sleep_summary">Ekranı bağlamaq üçün durum sətrinə iki dəfə toxunun</string>
@@ -445,20 +450,12 @@
   <string name="volume_adjust_sounds_title">Səs artırma tonları</string>
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">Titrəmə intensivliyi</string>
-  <string name="vibrator_warning">%1$d üstündəki dəyərlər tövsiyə edilmir</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">Rəng kalibrasiyası</string>
   <string name="color_calibration_summary">Ekran rənglərini kalibrlə</string>
   <string name="color_red_title">Qırmızı</string>
   <string name="color_green_title">Yaşıl</string>
   <string name="color_blue_title">Mavi</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">Qamma kalibrasiyası</string>
-  <string name="gamma_tuning_summary_head">Qamma dəyərlərini düzəltin</string>
-  <string name="gamma_tuning_control_set_header">Qrup <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_brightness">Parlaqlıq</string>
-  <string name="gamma_tuning_saturation">Doydurma</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">Musiqi tətbiqini başlat</string>
   <string name="headset_connect_player_summary">Qulaqcıq taxılanda musiqi tətbiqetməsini başladar</string>
@@ -474,26 +471,11 @@
   <string name="display_rotation_90_title">90 dərəcə</string>
   <string name="display_rotation_180_title">180 dərəcə</string>
   <string name="display_rotation_270_title">270 dərəcə</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">Ekran rəngi</string>
-  <string name="screencolor_summary">Ekran rəng çalarını, doydurmanı, təzadını və gərginliyini tənzimlə</string>
-  <string name="custom_screencolor">Xüsusi ekran rəngi</string>
-  <string name="screencolor_save">Saxla</string>
-  <string name="screencolor_cancel">İmtina</string>
-  <string name="restore_preview">İlkin şəklə bax</string>
-  <string name="selectnewfile_menu">Qalereyadan yeni şəklə bax</string>
-  <string name="selectfile_menu">Qalereyadan şəklə bax</string>
-  <string name="restore_default_str">Sıfırla</string>
-  <string name="hue_str">Çalar: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">Doydurma: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">Təzad: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">Gərginlik: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">Standart</string>
-  <string name="screen_color_vivid">Canlı</string>
-  <string name="screen_color_custom">Xüsusi</string>
   <!-- LiveDisplay -->
   <string name="live_display_day">Gündüz</string>
   <string name="live_display_night">Gecə</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="adj_saturation_title">Doydurma</string>
   <!-- Whether to display IME switcher notifcation -->
   <string name="ime_switcher_notify">Seçici nişanı</string>
   <string name="ime_switcher_notify_summary">Giriş üsulu seçici nişanını görüntülə</string>
@@ -711,6 +693,9 @@
   <!-- [CHAR_LIMIT=20] Battery use screen. Battery status shown in chart label when charging over Dock USB. -->
   <!-- Weather -->
   <string name="weather_settings_general_settings_title">Ümumi</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <!-- title for lock screen blur preference -->
+  <!-- title for lock screen weather preference -->
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">Kilik ekranında göstər</string>
   <string name="app_notification_show_on_keyguard_summary">Kilid ekranında bu tətbiqetmənin bildirişlərini göstər</string>
@@ -718,6 +703,7 @@
   <string name="app_notification_no_ongoing_on_keyguard_summary">Kilid ekranında bu tətbiqmənin davamlı bildirişlərini heç vaxt göstərmə</string>
   <!-- CmRadioInfo -->
   <!-- Radio Control (IMS/MBN etc.) -->
+  <!-- Lock screen wallpaper -->
   <!-- Format string for fingerprint location message -->
   <!-- Fingerprint sensor locations -->
   <!-- SIM status format string -->

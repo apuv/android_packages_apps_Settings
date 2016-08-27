@@ -38,6 +38,9 @@
   <string name="root_access_apps">Só aplicações</string>
   <string name="root_access_adb">Só ADB</string>
   <string name="root_access_all">Aplicações e ADB</string>
+  <!-- Preference link for root appops -->
+  <string name="root_appops_title">Gerir os acessos root</string>
+  <string name="root_appops_summary">Ver e controlar as regras de root</string>
   <!-- NFC PreferenceCategory title -->
   <string name="nfc_title_category">NFC</string>
   <!-- About phone screen, CyanogenMod version -->
@@ -54,6 +57,7 @@
   <string name="build_date">Data de compilação</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">Atualizações</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">Atualizar a recuperação Cyanogen</string>
   <string name="update_recovery_summary">Atualizar a recuperação juntamente com as atualizações do sistema</string>
@@ -273,6 +277,7 @@
   <!-- Lights settings, LED notification -->
   <string name="led_notification_title">Definições de luz</string>
   <string name="led_notification_text">Luz do LED ativada pelas definições</string>
+  <string name="notification_light_no_apps_summary">Para configurar as luzes de notificação para uma aplicação específica, ative \"%1$s\" e toque em \"\u002b\" na barra de menu</string>
   <!-- Setting checkbox title for Whether to enable Android debugging support on the phone. -->
   <string name="enable_adb_cm">Depuração Android</string>
   <!-- Setting checkbox summary for Whether to enable Android debugging support on the phone -->
@@ -529,6 +534,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">Ativar os botões virtuais</string>
   <string name="disable_navkeys_summary">Ativar os botões virtuais e desativar os botões físicos</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">Toque duplo liga o ecrã</string>
+  <string name="double_tap_to_wake_summary">Dê um toque duplo no ecrã para ligar o dispositivo</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">Toque duplo para desligar o ecrã</string>
   <string name="double_tap_to_sleep_summary">Dê um toque duplo na barra de estado para desligar o dispositivo</string>
@@ -545,21 +553,13 @@
   <string name="volume_adjust_sounds_title">Sons de ajuste do volume</string>
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">Intensidade de vibração</string>
-  <string name="vibrator_warning">Valores superiores a %1$d não são recomendados</string>
+  <string name="vibrator_warning">Valores superiores a %1$d%% não são recomendados</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">Calibração de cores</string>
   <string name="color_calibration_summary">Calibrar as cores do ecrã</string>
   <string name="color_red_title">Vermelho</string>
   <string name="color_green_title">Verde</string>
   <string name="color_blue_title">Azul</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">Calibração gama</string>
-  <string name="gamma_tuning_summary_head">Ajustar valores gama</string>
-  <string name="gamma_tuning_control_set_header">Grupo <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">Contraste</string>
-  <string name="gamma_tuning_brightness">Brilho</string>
-  <string name="gamma_tuning_saturation">Saturação</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">Iniciar a aplicação de música</string>
   <string name="headset_connect_player_summary">Iniciar a aplicação de música predefinida quando ligar os auscultadores</string>
@@ -576,23 +576,6 @@
   <string name="display_rotation_90_title">90 graus</string>
   <string name="display_rotation_180_title">180 graus</string>
   <string name="display_rotation_270_title">270 graus</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">Cor do ecrã</string>
-  <string name="screencolor_summary">Ajustar o tom, saturação, contraste ou intensidade do ecrã</string>
-  <string name="custom_screencolor">Cor personalizada do ecrã</string>
-  <string name="screencolor_save">Gravar</string>
-  <string name="screencolor_cancel">Cancelar</string>
-  <string name="restore_preview">Visualizar imagem predefinida</string>
-  <string name="selectnewfile_menu">Visualizar nova imagem da Galeria</string>
-  <string name="selectfile_menu">Visualizar imagem da Galeria</string>
-  <string name="restore_default_str">Repor</string>
-  <string name="hue_str">Tonalidade: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">Saturação: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">Contraste: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">Intensidade: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">Padrão</string>
-  <string name="screen_color_vivid">Brilhante</string>
-  <string name="screen_color_custom">Personalizado</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">Otimiza o ecrã com base na hora do dia e condições do ambiente para melhorar a legibilidade e reduzir a fadiga ocular</string>
   <string name="live_display_mode">Modo de exibição</string>
@@ -622,6 +605,15 @@
   <string name="live_display_color_profile_photography_summary">Melhor reprodução de cor para fotos</string>
   <string name="live_display_color_profile_basic_title">Básico</string>
   <string name="live_display_color_profile_basic_summary">Utilizar o ecrã não calibrado</string>
+  <string name="live_display_color_profile_adaptive_title">Adaptável</string>
+  <string name="live_display_color_profile_adaptive_summary">As cores adaptam-se às condições ambientais</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="picture_adjustment_title">Ajuste da imagem</string>
+  <string name="picture_adjustment_summary">Ajustar a tonalidade, a saturação, a intensidade e o contraste</string>
+  <string name="adj_hue_title">Tonalidade</string>
+  <string name="adj_saturation_title">Saturação</string>
+  <string name="adj_intensity_title">Intensidade</string>
+  <string name="adj_contrast_title">Contraste</string>
   <!-- Whether to display IME switcher notifcation -->
   <string name="ime_switcher_notify">Ícone de seleção</string>
   <string name="ime_switcher_notify_summary">Mostrar ícone de seleção de método de entrada</string>
@@ -1042,6 +1034,12 @@
   <string name="restrict_cellular_access_summary">Desativar o acesso de dados em redes móveis</string>
   <string name="restrict_cellular_access_dialog_title">Restringir o acesso de dados móveis?</string>
   <string name="restrict_cellular_access_dialog_summary">Este recurso pode fazer com que uma aplicação que dependa de acesso à rede deixe de responder quando só estiverem disponíveis redes móveis.\n\nPoderá encontrar ferramentas mais apropriadas para o controlo de dados nas definições disponíveis na aplicação.</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <string name="shortcut_carrier_title">Operadores de rede</string>
+  <!-- title for lock screen blur preference -->
+  <string name="lockscreen_blur_enabled_title">Desfocar fundo</string>
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">Mostrar o tempo</string>
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">Mostrar no ecrã de bloqueio</string>
   <string name="app_notification_show_on_keyguard_summary">Mostrar notificações desta aplicação no ecrã de bloqueio</string>
@@ -1062,6 +1060,8 @@
   <string name="cm_radio_info_adb_log_off_label">Ativar os registos de rádio ADB</string>
   <string name="cm_radio_info_diag_log_on_label">Desativar os registos de Diag</string>
   <string name="cm_radio_info_diag_log_off_label">Ativar os registos de Diag</string>
+  <!-- Lock screen wallpaper -->
+  <string name="lockscreen_wallpaper_title">Imagem de fundo</string>
   <string name="not_available_with_app">Não disponível com %1$s</string>
   <!-- Format string for fingerprint location message -->
   <string name="security_settings_fingerprint_enroll_find_sensor_message_cm">Localize o sensor de impressões digitais na <xliff:g id="sensor_location">%1$s</xliff:g> do seu telefone.</string>

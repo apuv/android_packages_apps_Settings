@@ -34,6 +34,7 @@
   <string name="root_access_apps">بەرنامەکان تەنها</string>
   <string name="root_access_adb">تەنها ADB</string>
   <string name="root_access_all">بەرنامەکان و ADB</string>
+  <!-- Preference link for root appops -->
   <!-- NFC PreferenceCategory title -->
   <!-- About phone screen, CyanogenMod version -->
   <string name="mod_version">وەشانی کوردی</string>
@@ -48,6 +49,7 @@
   <string name="build_date">بنیاتنانی ڕۆژ</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">نوێکردنه‌وه‌ی وەشانەکە</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">بەڕۆژکردنی ڕیکاڤێری سایانۆجێن</string>
   <string name="update_recovery_summary">نوێکردنەوەی ڕیکەڤەری لەگەڵ نوێکردنەوەی سیستەمدا</string>
@@ -430,6 +432,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">چالاکردنی شریتی ڕوونما</string>
   <string name="disable_navkeys_summary">چالاکردنی کردنه‌وه‌ی ڕێدۆزه‌ره‌ی ڕوونما و له‌کارخستنی دوگمه‌ی ڕه‌قه‌کاڵڵا</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">دوجارلێیده‌ بۆ هه‌ڵسان</string>
+  <string name="double_tap_to_wake_summary">دوجار دەستلێدە بۆ کردنەوەی شاشەکە</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">دوجار-لێدان بۆ خه‌وتن</string>
   <string name="double_tap_to_sleep_summary">دوجار دەستبدە لە شریتی دۆخ بۆ کوژانەوەی پیشاندان</string>
@@ -446,21 +451,12 @@
   <string name="volume_adjust_sounds_title">دەستکاریکردنی دەنگ</string>
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">له‌رینه‌وه‌ی توندێتی</string>
-  <string name="vibrator_warning">به‌های به‌رزتر له‌ %1$d پشتگیری نه‌کراوه‌</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">ڕه‌نگ کالیبره‌یشن</string>
   <string name="color_calibration_summary">کالیبره‌یت له‌سه‌ر ڕه‌نگی ڕوونما</string>
   <string name="color_red_title">سور</string>
   <string name="color_green_title">سه‌وز</string>
   <string name="color_blue_title">شین</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">کالیبره‌یشنی سێیه‌م</string>
-  <string name="gamma_tuning_summary_head">به‌های تویک</string>
-  <string name="gamma_tuning_control_set_header">کۆمەڵ<xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">جیاوازی</string>
-  <string name="gamma_tuning_brightness">ڕوناکی</string>
-  <string name="gamma_tuning_saturation">تێرایی</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">کردنه‌وه‌ی به‌رنامه‌ی ده‌نگ</string>
   <string name="headset_connect_player_summary">کردنه‌وه‌ی به‌رنامه‌ی مۆسیقای بنه‌ڕه‌تی کاتێک بڵندگۆ په‌یوه‌ندکرا</string>
@@ -476,22 +472,6 @@
   <string name="display_rotation_90_title">90 پلە</string>
   <string name="display_rotation_180_title">180 پلە</string>
   <string name="display_rotation_270_title">270 پلە</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">ڕەنگی ڕوونما</string>
-  <string name="custom_screencolor">ڕێکخستنی ڕەنگی ڕوونما</string>
-  <string name="screencolor_save">پاشەکەوتکردن</string>
-  <string name="screencolor_cancel">پاشگەزبوونەوە</string>
-  <string name="restore_preview">بینینی وێنەی بنەڕەتی</string>
-  <string name="selectnewfile_menu">بینینی وێنەی نوێ لە پێشانگەوە</string>
-  <string name="selectfile_menu">بینینی وێنە لە پێشانگەوە</string>
-  <string name="restore_default_str">ڕێکخستنەوە</string>
-  <string name="hue_str">ڕەنگ: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">تێریی ڕەنگ: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">کۆنتراست: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">توندێتیی ڕەنگ: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">پێوانەی</string>
-  <string name="screen_color_vivid">زیرەکی</string>
-  <string name="screen_color_custom">درووستکراو</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">پاشینەسازی لەسەر شاشەکەت  بەندە بە کاتی ڕۆژ وە مەرجی چاکسازی بۆ خوێندنەوەی و کەمکردنەوەی چاوسوین</string>
   <string name="live_display_mode">پیشاندانی بار</string>
@@ -505,6 +485,9 @@
   <string name="live_display_low_power_title">کەمکردنەوەی هێزی بەکارهێنان</string>
   <string name="live_display_low_power_summary">ڕێکخستنی پیشاندان بۆ هێزی کەم بەکارهێنان بەبێ پلەدابەزاندن</string>
   <string name="live_display_enhance_color_title">ڕەنگی زیادەکات</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="adj_saturation_title">تێرایی</string>
+  <string name="adj_contrast_title">جیاوازی</string>
   <!-- Whether to display IME switcher notifcation -->
   <string name="ime_switcher_notify">هەڵبژاردەی وێنۆچکە</string>
   <string name="ime_switcher_notify_summary">پیشاندانی ڕێگەی هەڵبژاردەی وێنۆچکە</string>
@@ -771,6 +754,10 @@
   <!-- [CHAR_LIMIT=20] Battery use screen. Battery status shown in chart label when charging over Dock USB. -->
   <!-- Weather -->
   <string name="weather_settings_general_settings_title">گشتی</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <!-- title for lock screen blur preference -->
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">پیشاندانی کەش و هەوا</string>
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">پیشاندانی لەسەر قوفڵی شاشە</string>
   <string name="app_notification_show_on_keyguard_summary">پیشاندانی تێبینی لەم بەرنامەیە لەسەر قوفڵی شاشە</string>
@@ -778,6 +765,7 @@
   <string name="app_notification_no_ongoing_on_keyguard_summary">هەرگیز بەبەردەوامی تێبینی پیشان مەدە لەسەر ئەم بەرنامەیە لەسەر قوفڵی سەر شاشە</string>
   <!-- CmRadioInfo -->
   <!-- Radio Control (IMS/MBN etc.) -->
+  <!-- Lock screen wallpaper -->
   <!-- Format string for fingerprint location message -->
   <!-- Fingerprint sensor locations -->
   <!-- SIM status format string -->

@@ -38,6 +38,7 @@
   <string name="root_access_apps">అనువర్తనాలు మాత్రమే</string>
   <string name="root_access_adb">ADB మాత్రమే</string>
   <string name="root_access_all">అనువర్తనాలు మరియు ADB</string>
+  <!-- Preference link for root appops -->
   <!-- NFC PreferenceCategory title -->
   <string name="nfc_title_category">NFC</string>
   <!-- About phone screen, CyanogenMod version -->
@@ -54,6 +55,7 @@
   <string name="build_date">నిర్మించబడిన తేదీ</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">సయనోజెన్ మోడ్ అప్డేట్లు</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">సయనోజెన్ పునరుద్ధరణను నవీకరించుము</string>
   <string name="update_recovery_summary">సిస్టమ్ అప్డేట్లతో పునరుద్ధరణను అప్డేట్ చేయుము</string>
@@ -527,6 +529,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">ఆన్-స్క్రీన్ నావిగేషన్ బారును చేతనపరుచుము</string>
   <string name="disable_navkeys_summary">ఆన్-స్క్రీన్ నావిగేషన్ బారును చేతనపరుచుము మరియు హార్డ్ వేర్ బటనులను అచేతనం చేయుము</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">ప్రదర్శనను ప్రారంభించేందుకు తెర పైన రెండు మార్లు తట్టు</string>
+  <string name="double_tap_to_wake_summary">ప్రదర్శనను ప్రారంభించేందుకు తెర పైన రెండు మార్లు తట్టు</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">నిర్వీర్యం చేయడానికి రెండుసార్లు ట్యాప్ చేయండి</string>
   <string name="double_tap_to_sleep_summary">డిస్ప్లేను ఆపివేయడానికి స్టేటస్ బార్ పైన రెండుసార్లు ట్యాప్ చేయండి</string>
@@ -543,21 +548,12 @@
   <string name="volume_adjust_sounds_title">వాల్యూమ్ సవరణ శబ్దాలు</string>
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">వైబ్రేటర్ తీవ్రత</string>
-  <string name="vibrator_warning">%1$d కంటే ఎక్కువగా ఉండే విలువలు సిఫార్సు చేయబడవు</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">రంగు క్రమాంకనం</string>
   <string name="color_calibration_summary">ఆన్-స్క్రీన్ రంగులను క్రమాంకనం చేయుము</string>
   <string name="color_red_title">ఎరుపు రంగు</string>
   <string name="color_green_title">పచ్చ రంగు</string>
   <string name="color_blue_title">నీలి రంగు</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">గామా క్రమాంకనం</string>
-  <string name="gamma_tuning_summary_head">గామా విలువలు సర్దుబాటు చేయుము</string>
-  <string name="gamma_tuning_control_set_header">సమూహం <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">వ్యత్యాసం</string>
-  <string name="gamma_tuning_brightness">ప్రకాశం</string>
-  <string name="gamma_tuning_saturation">సంతృప్తత</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">సంగీతాన్ని ప్రారంభించు అనువర్తనం</string>
   <string name="headset_connect_player_summary">హెడ్ సెట్ అనుసంధానించబడి ఉన్నప్పుడు స్వయంసిద్ధ సంగీతం అనువర్తనాన్ని ప్రారంభించుము</string>
@@ -574,23 +570,6 @@
   <string name="display_rotation_90_title">90 డిగ్రీలు</string>
   <string name="display_rotation_180_title">180 డిగ్రీలు</string>
   <string name="display_rotation_270_title">270 డిగ్రీలు</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">స్క్రీన్ రంగు</string>
-  <string name="screencolor_summary">స్క్రీన్ వర్ణం, సంతృప్తత, వర్ణ వ్యత్యాసం లేదా తీవ్రతలను ట్యూన్ చేయుము</string>
-  <string name="custom_screencolor">స్క్రీన్ రంగును అనుకూలితం చేయుము</string>
-  <string name="screencolor_save">సేవ్ చేయి</string>
-  <string name="screencolor_cancel">రద్దు చేయి</string>
-  <string name="restore_preview">స్వయంసిద్ధ చిత్రాన్ని వీక్షించుము</string>
-  <string name="selectnewfile_menu">గ్యాలరీ నుండి క్రొత్త చిత్రాన్ని వీక్షించుము</string>
-  <string name="selectfile_menu">గ్యాలరీ నుండి చిత్రాన్ని వీక్షించుము</string>
-  <string name="restore_default_str">రీసెట్ చేయి</string>
-  <string name="hue_str">వర్ణం: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">సంతృప్తత: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">వర్ణ వ్యత్యాసం: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">తీవ్రత: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">ప్రామాణిక</string>
-  <string name="screen_color_vivid">ప్రకాశవంతమైన</string>
-  <string name="screen_color_custom">అనుకూలం</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">చదవడానికి అనుకూలంగా ఉండే విధంగా మరియు కళ్ళ పైన ఒత్తిడిని తగ్గించేందుకు రోజు యొక్క సమయం మరియు పరిసర పరిస్థితులను బట్టి సమయాన్ని సెట్ చేయండి</string>
   <string name="live_display_mode">ప్రదర్శిత మోడ్</string>
@@ -620,6 +599,9 @@
   <string name="live_display_color_profile_photography_summary">ఫోటోల కొరకు సరైన వర్ణ పునరుత్పత్తి</string>
   <string name="live_display_color_profile_basic_title">ప్రాధమిక</string>
   <string name="live_display_color_profile_basic_summary">అన్‌కాలిబ్రేటెడ్ ప్రదర్శనను ఉపయోగించుము</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="adj_saturation_title">సంతృప్తత</string>
+  <string name="adj_contrast_title">వ్యత్యాసం</string>
   <!-- Whether to display IME switcher notifcation -->
   <string name="ime_switcher_notify">సెలెక్టర్ చిహ్నం</string>
   <string name="ime_switcher_notify_summary">ఇన్పుట్ ప్రక్రియను ఎంచుకునే చిహ్నాన్ని ప్రదర్శించుము</string>
@@ -1009,6 +991,10 @@
   <string name="battery_info_status_charging_dock_usb">డాక్ USB పైన చార్జింగ్ అవుతుంది</string>
   <!-- Weather -->
   <string name="weather_settings_general_settings_title">సాధారణం</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <!-- title for lock screen blur preference -->
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">వాతావరణాన్ని చూపించు</string>
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">లాక్ స్క్రీనును చూపుము</string>
   <string name="app_notification_show_on_keyguard_summary">ఈ ప్రోగ్రాం నుండి వచ్చే నోటిఫికేషన్లను లాక్ స్క్రీన్ పైన చూపుము</string>
@@ -1016,6 +1002,7 @@
   <string name="app_notification_no_ongoing_on_keyguard_summary">ఎప్పుడూ కూడా ఈ ప్రోగ్రాం నుండి వచ్చే నిరంతర నోటిఫికేషన్లను లాక్ స్క్రీన్ పైన చూపవద్దు</string>
   <!-- CmRadioInfo -->
   <!-- Radio Control (IMS/MBN etc.) -->
+  <!-- Lock screen wallpaper -->
   <!-- Format string for fingerprint location message -->
   <!-- Fingerprint sensor locations -->
   <!-- SIM status format string -->

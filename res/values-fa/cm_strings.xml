@@ -38,6 +38,7 @@
   <string name="root_access_apps">فقط برنامه‌ها</string>
   <string name="root_access_adb">فقط ای‌دی‌بی</string>
   <string name="root_access_all">برنامه‌ها و ای‌دی‌بی</string>
+  <!-- Preference link for root appops -->
   <!-- NFC PreferenceCategory title -->
   <string name="nfc_title_category">ان‌اف‌سی</string>
   <!-- About phone screen, CyanogenMod version -->
@@ -53,6 +54,7 @@
   <string name="build_date">تاریخ ساخت</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">بروزرسانی‌های سایانوژن‌مود</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">بروزرسانی ریکاوری سایانوژن‌مود</string>
   <string name="update_recovery_summary">بروزرسانی ریکاوری با بروزرسانی‌های سیستم</string>
@@ -464,6 +466,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">فعال کردن نوار پیمایش روی صفحه</string>
   <string name="disable_navkeys_summary">فعال کردن نوار پیمایش روی صفحه و غیرفعال کردن دکمه‌های سخت‌افزاری</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">دو بار ضربه برای بیدار شدن</string>
+  <string name="double_tap_to_wake_summary">روشن شدن صفحه با دوبار ضربه زدن روی آن</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">دو بار ضربه برای به خواب رفتن</string>
   <string name="double_tap_to_sleep_summary">خاموش شدن صفحه با دوبار ضربه زدن روی نوار وضعیت</string>
@@ -480,21 +485,12 @@
   <string name="volume_adjust_sounds_title">تن تنظیم بلندی صدا</string>
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">شدت لرزش</string>
-  <string name="vibrator_warning">مقادیر بالاتر از %1$d توصیه نمی‌شود</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">تنظیم رنگ</string>
   <string name="color_calibration_summary">تنظیم رنگ‌های خروجی صفحه</string>
   <string name="color_red_title">قرمز</string>
   <string name="color_green_title">سبز</string>
   <string name="color_blue_title">آبی</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">تنظیم گاما</string>
-  <string name="gamma_tuning_summary_head">تغییر جزئی مقادیر گاما</string>
-  <string name="gamma_tuning_control_set_header">گروه <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">کنتراست</string>
-  <string name="gamma_tuning_brightness">روشنایی</string>
-  <string name="gamma_tuning_saturation">اشباع</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">اجرای برنامه موسیقی</string>
   <string name="headset_connect_player_summary">هنگام اتصال هدست برنامه پیش‌فرض موسیقی اجرا شود</string>
@@ -511,23 +507,6 @@
   <string name="display_rotation_90_title">۹۰ درجه</string>
   <string name="display_rotation_180_title">۱۸۰ درجه</string>
   <string name="display_rotation_270_title">۲۷۰ درجه</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">رنگ صفحه</string>
-  <string name="screencolor_summary">تنظیم ته‌رنگ، اشباع، کنتراست یا شدت رنگ صفحه</string>
-  <string name="custom_screencolor">رنگ سفارشی صفحه</string>
-  <string name="screencolor_save">ذخیره</string>
-  <string name="screencolor_cancel">لغو</string>
-  <string name="restore_preview">مشاهده تصویر پیش‌فرض</string>
-  <string name="selectnewfile_menu">مشاهده تصویر جدید از گالری</string>
-  <string name="selectfile_menu">مشاهده تصویر از گالری</string>
-  <string name="restore_default_str">تنظیم مجدد</string>
-  <string name="hue_str">ته‌رنگ: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">اشباع: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">کنتراست: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">شدت رنگ: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">استاندارد</string>
-  <string name="screen_color_vivid">واضح</string>
-  <string name="screen_color_custom">شخصی</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">بهینه کردن صفحه بر اساس ساعات روز و شرایط محیطی برای افزایش خوانایی و کاهش خستگی چشم</string>
   <string name="live_display_mode">حالت نمایش</string>
@@ -552,6 +531,9 @@
   <string name="live_display_color_profile_cinema_title">سینما</string>
   <string name="live_display_color_profile_astronomy_title">نجوم</string>
   <string name="live_display_color_profile_astronomy_summary">قرمز پررنگ برای مراقبت از بینایی در شب</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="adj_saturation_title">اشباع</string>
+  <string name="adj_contrast_title">کنتراست</string>
   <!-- Whether to display IME switcher notifcation -->
   <string name="ime_switcher_notify">آیکون انتخابگر</string>
   <string name="ime_switcher_notify_summary">نمایش آیکون انتخابگر روش ورودی</string>
@@ -898,6 +880,10 @@
   <string name="battery_info_status_charging_dock_usb">در حال شارژ در داک یواس‌بی</string>
   <!-- Weather -->
   <string name="weather_settings_general_settings_title">عمومي</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <!-- title for lock screen blur preference -->
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">نمایش آب و هوا</string>
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">نمایش در قفل صفحه</string>
   <string name="app_notification_show_on_keyguard_summary">نمایش اعلان‌های این برنامه در قفل صفحه</string>
@@ -905,6 +891,7 @@
   <string name="app_notification_no_ongoing_on_keyguard_summary">اعلان‌های پایدار این برنامه هرگز در قفل صفحه نشان داده نشود</string>
   <!-- CmRadioInfo -->
   <!-- Radio Control (IMS/MBN etc.) -->
+  <!-- Lock screen wallpaper -->
   <!-- Format string for fingerprint location message -->
   <!-- Fingerprint sensor locations -->
   <!-- SIM status format string -->

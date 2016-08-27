@@ -39,6 +39,9 @@
   <string name="root_access_apps">Pouze aplikace</string>
   <string name="root_access_adb">Pouze ADB</string>
   <string name="root_access_all">Aplikace a ADB</string>
+  <!-- Preference link for root appops -->
+  <string name="root_appops_title">Spravovat přístupy root</string>
+  <string name="root_appops_summary">Zobrazit a zpravovat pravidla přístupů root</string>
   <!-- NFC PreferenceCategory title -->
   <string name="nfc_title_category">NFC</string>
   <!-- About phone screen, CyanogenMod version -->
@@ -55,6 +58,7 @@
   <string name="build_date">Datum sestavení</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">Aktualizace CyanogenMod</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">Aktualizovat Cyanogen recovery</string>
   <string name="update_recovery_summary">Aktualizovat recovery pomocí aktualizace systému</string>
@@ -274,6 +278,7 @@
   <!-- Lights settings, LED notification -->
   <string name="led_notification_title">Nastavení světelné signalizace</string>
   <string name="led_notification_text">LED světlo povolené v nastavení</string>
+  <string name="notification_light_no_apps_summary">Chcete-li přidat řízení jednotlivých aplikací, aktivujte „%1$s“ a použijte tlačítko „\u002b“ v panelu nabídky</string>
   <!-- Setting checkbox title for Whether to enable Android debugging support on the phone. -->
   <string name="enable_adb_cm">Ladění systému Android</string>
   <!-- Setting checkbox summary for Whether to enable Android debugging support on the phone -->
@@ -530,6 +535,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">Povolit navigační lištu na obrazovce</string>
   <string name="disable_navkeys_summary">Povolit navigační lištu na obrazovce a zakázat hardwarová tlačítka</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">Probuzení dvojím dotykem</string>
+  <string name="double_tap_to_wake_summary">Dvojitým poklepáním zapnout obrazovku</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">Dvojím klepnutím uspat</string>
   <string name="double_tap_to_sleep_summary">Dvojitým poklepáním na stavovou lištu vypnout obrazovku</string>
@@ -546,21 +554,13 @@
   <string name="volume_adjust_sounds_title">Zvuk při změně hlasitosti</string>
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">Intenzita vibrací</string>
-  <string name="vibrator_warning">Nedoporučuje se použít hodnoty větší než %1$d</string>
+  <string name="vibrator_warning">Nedoporučuje se použít hodnoty větší než %1$d%%</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">Barevná kalibrace</string>
   <string name="color_calibration_summary">Kalibrovat barvy obrazovky</string>
   <string name="color_red_title">Červená</string>
   <string name="color_green_title">Zelená</string>
   <string name="color_blue_title">Modrá</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">Gamma kalibrace</string>
-  <string name="gamma_tuning_summary_head">Přizpůsobení hodnot gamma</string>
-  <string name="gamma_tuning_control_set_header">Skupina <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">Kontrast</string>
-  <string name="gamma_tuning_brightness">Jas</string>
-  <string name="gamma_tuning_saturation">Sytost</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">Spustit aplikaci pro přehrávání hudby</string>
   <string name="headset_connect_player_summary">Pokud jsou připojena sluchátka, spustit výchozí aplikaci pro přehrávání hudby</string>
@@ -577,23 +577,6 @@
   <string name="display_rotation_90_title">90 stupňů</string>
   <string name="display_rotation_180_title">180 stupňů</string>
   <string name="display_rotation_270_title">270 stupňů</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">Barvy obrazovky</string>
-  <string name="screencolor_summary">Upravit odstín, sytost, kontrast nebo intenzitu obrazovky</string>
-  <string name="custom_screencolor">Vlastní barvy obrazovky</string>
-  <string name="screencolor_save">Uložit</string>
-  <string name="screencolor_cancel">Zrušit</string>
-  <string name="restore_preview">Zobrazit výchozí obrázek</string>
-  <string name="selectnewfile_menu">Zobrazit nový obrázek z Galerie</string>
-  <string name="selectfile_menu">Zobrazit obrázek z Galerie</string>
-  <string name="restore_default_str">Obnovit</string>
-  <string name="hue_str">Barva: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">Sytost: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">Kontrast: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">Intenzita: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">Standardní</string>
-  <string name="screen_color_vivid">Živé</string>
-  <string name="screen_color_custom">Vlastní</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">Optimalizovat obrazovku podle denní doby a okolních podmínek pro lepší čitelnost a snížení namáhání očí</string>
   <string name="live_display_mode">Režim zobrazení</string>
@@ -623,6 +606,15 @@
   <string name="live_display_color_profile_photography_summary">Perfektní zobrazení barev pro fotografie</string>
   <string name="live_display_color_profile_basic_title">Základní</string>
   <string name="live_display_color_profile_basic_summary">Použít nezkalibrovaný displej</string>
+  <string name="live_display_color_profile_adaptive_title">Adaptivní</string>
+  <string name="live_display_color_profile_adaptive_summary">Přizpůsobit barvy okolním podmínkám</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="picture_adjustment_title">Nastavení obrazu</string>
+  <string name="picture_adjustment_summary">Upravit odstín, sytost, intenzitu a kontrast</string>
+  <string name="adj_hue_title">Odstín</string>
+  <string name="adj_saturation_title">Sytost</string>
+  <string name="adj_intensity_title">Intenzita</string>
+  <string name="adj_contrast_title">Kontrast</string>
   <!-- Whether to display IME switcher notifcation -->
   <string name="ime_switcher_notify">Ikona pro volbu</string>
   <string name="ime_switcher_notify_summary">Zobrazit ikonu volby vstupní metody</string>
@@ -1042,6 +1034,12 @@
   <string name="restrict_cellular_access_summary">Zakázat přístup k datům na mobilních sítích</string>
   <string name="restrict_cellular_access_dialog_title">Omezit přístup k mobilním datům?</string>
   <string name="restrict_cellular_access_dialog_summary">Tato vlastnost může způsobit zastavení funkčnosti některých aplikací, které jsou závislé na přístupu k datům a zařízení je právě připojeno pouze k mobilní datové síti.\n\nVhodnějsí omezení využití dat je možné nalézt v ovládání používání datových sítí v nastavení aplikace.</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <string name="shortcut_carrier_title">Síťový poskytovatelé</string>
+  <!-- title for lock screen blur preference -->
+  <string name="lockscreen_blur_enabled_title">Rozostření pozadí</string>
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">Zobrazit počasí</string>
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">Zobrazit na zamykací obrazovce</string>
   <string name="app_notification_show_on_keyguard_summary">Zobrazit upozornění z aplikace na zamykací obrazovce</string>
@@ -1062,6 +1060,8 @@
   <string name="cm_radio_info_adb_log_off_label">Zapnout protokol ADB radio</string>
   <string name="cm_radio_info_diag_log_on_label">Vypnout protokol Diag</string>
   <string name="cm_radio_info_diag_log_off_label">Zapnout protokol Diag</string>
+  <!-- Lock screen wallpaper -->
+  <string name="lockscreen_wallpaper_title">Tapeta</string>
   <string name="not_available_with_app">Není k dispozici s %1$s</string>
   <!-- Format string for fingerprint location message -->
   <string name="security_settings_fingerprint_enroll_find_sensor_message_cm">Vyhledejte snímač otisku prstů <xliff:g id="sensor_location">%1$s</xliff:g> na telefonu.</string>

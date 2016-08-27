@@ -42,6 +42,7 @@
   <string name="root_access_apps">للتطبيقات فقط</string>
   <string name="root_access_adb">لـADB فقط</string>
   <string name="root_access_all">التطبيقات وADB</string>
+  <!-- Preference link for root appops -->
   <!-- NFC PreferenceCategory title -->
   <string name="nfc_title_category">الاتصال بالحقل القريب</string>
   <!-- About phone screen, CyanogenMod version -->
@@ -58,6 +59,7 @@
   <string name="build_date">تاريخ إنشاء</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">تحديثات CyanogenMod</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">تحديث استعادة Cyanogen (Cyanogen recovery)</string>
   <string name="update_recovery_summary">تحديث الاستعادة بتحديثات النظام</string>
@@ -277,6 +279,7 @@
   <!-- Lights settings, LED notification -->
   <string name="led_notification_title">إعدادات الإضاءة</string>
   <string name="led_notification_text">إضاءة الـ LED ممكنة من الإعدادات</string>
+  <string name="notification_light_no_apps_summary">لإضافة تحكم لكل تطبيق، قم بتنشيط \'%1$s\' واضغط على \'\u002b\' على شريط القوائم</string>
   <!-- Setting checkbox title for Whether to enable Android debugging support on the phone. -->
   <string name="enable_adb_cm">تصحيح أخطاء Android</string>
   <!-- Setting checkbox summary for Whether to enable Android debugging support on the phone -->
@@ -533,6 +536,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">تمكين شريط التنقل على الشاشة</string>
   <string name="disable_navkeys_summary">تمكين شريط التنقل على الشاشة وتعطيل أزرار الجهاز</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">الضغط المزدوج لتنبيه</string>
+  <string name="double_tap_to_wake_summary">المس الشاشة مرتين لتشغيل العرض</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">المس مرتين لبدء وضع السكون</string>
   <string name="double_tap_to_sleep_summary">الضغط مرتين فوق شريط الحالة لإطفاء الشاشة</string>
@@ -549,21 +555,12 @@
   <string name="volume_adjust_sounds_title">أصوات تعديل حجم الصوت </string>
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">شدة الاهتزاز</string>
-  <string name="vibrator_warning">لا ينصح باستخدام قيم أعلى من %1$d</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">معايرة الألوان</string>
   <string name="color_calibration_summary">معايرة للألوان على الشاشة</string>
   <string name="color_red_title">أحمر</string>
   <string name="color_green_title">أخضر</string>
   <string name="color_blue_title">أزرق</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">معايرة چاما</string>
-  <string name="gamma_tuning_summary_head">قيم Tweak gamma</string>
-  <string name="gamma_tuning_control_set_header">مجموعة <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">التباين</string>
-  <string name="gamma_tuning_brightness">السطوع</string>
-  <string name="gamma_tuning_saturation">التشبع</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">بدء تشغيل تطبيق الموسيقى</string>
   <string name="headset_connect_player_summary">بدء تشغيل تطبيق الموسيقى المبدئيّ عند توصيل سماعات الرأس</string>
@@ -580,23 +577,6 @@
   <string name="display_rotation_90_title">90 درجة</string>
   <string name="display_rotation_180_title">180 درجة</string>
   <string name="display_rotation_270_title">270 درجة</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">لون الشاشة</string>
-  <string name="screencolor_summary">ضبط لون شاشة أو مستوى التشبع أو التباين أو الكثافة</string>
-  <string name="custom_screencolor">لون الشاشة المخصص</string>
-  <string name="screencolor_save">حفظ</string>
-  <string name="screencolor_cancel">الغاء</string>
-  <string name="restore_preview">عرض الصورة المبدئيّة</string>
-  <string name="selectnewfile_menu">عرض صورة جديدة من معرض الصور</string>
-  <string name="selectfile_menu">عرض صورة من معرض الصور</string>
-  <string name="restore_default_str">إعادة تعيين</string>
-  <string name="hue_str">تدرج اللون: <xliff:g id="hue_value">%1$s </xliff:g></string>
-  <string name="saturation_str">التشبع: <xliff:g id="saturation_value">%1$s </xliff:g></string>
-  <string name="contrast_str">التباين: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">الكثافة: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">قياسى</string>
-  <string name="screen_color_vivid">حي</string>
-  <string name="screen_color_custom">مخصص</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">تحسين الشاشة بحسب الوقت من اليوم والظروف المحيطة لتسهيل القراءة وتقليل إجهاد العين</string>
   <string name="live_display_mode">نمط العرض</string>
@@ -626,6 +606,9 @@
   <string name="live_display_color_profile_photography_summary">إعادة إنتاج لون متطابق للصور</string>
   <string name="live_display_color_profile_basic_title">أساسي</string>
   <string name="live_display_color_profile_basic_summary">استخدام العرض غير المعاير</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="adj_saturation_title">التشبع</string>
+  <string name="adj_contrast_title">التباين</string>
   <!-- Whether to display IME switcher notifcation -->
   <string name="ime_switcher_notify">رمز التحديد</string>
   <string name="ime_switcher_notify_summary">عرض رمز تحديد طريقة الإدخال </string>
@@ -1048,6 +1031,11 @@
   <string name="restrict_cellular_access_summary">تعطيل الوصول إلى البيانات على الشبكات الخلوية</string>
   <string name="restrict_cellular_access_dialog_title">تقييد الوصول إلى البيانات الخلوية؟</string>
   <string name="restrict_cellular_access_dialog_summary">قد تسبب هذه الميزة توقف تطبيق معين يعتمد على الوصول إلى شبكة الاتصال لإيقاف العمل في حالة توفر شبكات خلوية.\n\nيمكنك العثور على ضوابط أكثر ملاءمة لاستخدام البيانات في الإعدادات المتوفرة داخل التطبيق.</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <string name="shortcut_carrier_title">مشغلات الشبكات</string>
+  <!-- title for lock screen blur preference -->
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">إظهار حالة الطقس</string>
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">إظهار على شاشة التأمين</string>
   <string name="app_notification_show_on_keyguard_summary">إظهار إشعارات من هذا التطبيق على شاشة التأمين</string>
@@ -1055,6 +1043,7 @@
   <string name="app_notification_no_ongoing_on_keyguard_summary">عدم إظهار إشعارات ثابتة من هذا التطبيق على شاشة التأمين</string>
   <!-- CmRadioInfo -->
   <!-- Radio Control (IMS/MBN etc.) -->
+  <!-- Lock screen wallpaper -->
   <!-- Format string for fingerprint location message -->
   <!-- Fingerprint sensor locations -->
   <!-- SIM status format string -->

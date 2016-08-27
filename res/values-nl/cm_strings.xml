@@ -22,9 +22,9 @@
     <item quantity="other">U bent nog <xliff:g id="step_count">%1$d</xliff:g> stappen verwijderd van de opties voor ontwikkelaars.</item>
   </plurals>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
-  <string name="show_dev_on_cm">U heeft de opties voor ontwikkelaars ingeschakeld.</string>
+  <string name="show_dev_on_cm">U hebt de opties voor ontwikkelaars ingeschakeld!</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
-  <string name="show_dev_already_cm">Niet nodig, u heeft de opties voor ontwikkelaars al ingeschakeld.</string>
+  <string name="show_dev_already_cm">Niet nodig, u hebt de opties voor ontwikkelaars al ingeschakeld.</string>
   <!-- Launch Dev Tools -->
   <string name="development_tools_title">Opties voor ontwikkelaars</string>
   <!-- Development shortcut -->
@@ -38,6 +38,9 @@
   <string name="root_access_apps">Alleen apps</string>
   <string name="root_access_adb">Alleen ADB</string>
   <string name="root_access_all">Apps en ADB</string>
+  <!-- Preference link for root appops -->
+  <string name="root_appops_title">Root-toegang beheren</string>
+  <string name="root_appops_summary">Root-instellingen bekijken en beheren</string>
   <!-- NFC PreferenceCategory title -->
   <string name="nfc_title_category">NFC</string>
   <!-- About phone screen, CyanogenMod version -->
@@ -54,6 +57,7 @@
   <string name="build_date">Build-datum</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">CyanogenMod-updates</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">Cyanogen-recovery bijwerken</string>
   <string name="update_recovery_summary">Recovery bijwerken met systeemupdates</string>
@@ -528,6 +532,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">On-screen navigatiebalk inschakelen</string>
   <string name="disable_navkeys_summary">On-screen navigatiebalk inschakelen en hardware-knoppen uitschakelen</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">Dubbeltikken om te ontwaken</string>
+  <string name="double_tap_to_wake_summary">Dubbeltikken op het scherm om te ontwaken</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">Dubbeltikken voor slaapstand</string>
   <string name="double_tap_to_sleep_summary">Dubbeltikken op de statusbalk voor slaapstand</string>
@@ -544,21 +551,13 @@
   <string name="volume_adjust_sounds_title">Aanpassingsgeluid volume</string>
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">Trilintensiteit</string>
-  <string name="vibrator_warning">Waarden hoger dan %1$d worden niet aangeraden</string>
+  <string name="vibrator_warning">Waarden hoger dan %1$d%% worden niet aangeraden</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">Kleuren kalibreren</string>
   <string name="color_calibration_summary">Schermkleur kalibreren</string>
   <string name="color_red_title">Rood</string>
   <string name="color_green_title">Groen</string>
   <string name="color_blue_title">Blauw</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">Gammakalibratie</string>
-  <string name="gamma_tuning_summary_head">Gammawaarden aanpassen</string>
-  <string name="gamma_tuning_control_set_header">Groep <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">Contrast</string>
-  <string name="gamma_tuning_brightness">Helderheid</string>
-  <string name="gamma_tuning_saturation">Verzadiging</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">Muziek-app openen</string>
   <string name="headset_connect_player_summary">Standaardmuziek-app openen bij aansluiten headset</string>
@@ -575,23 +574,6 @@
   <string name="display_rotation_90_title">90 graden</string>
   <string name="display_rotation_180_title">180 graden</string>
   <string name="display_rotation_270_title">270 graden</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">Schermkleur</string>
-  <string name="screencolor_summary">Tint, verzadiging, contrast en intensiteit van het scherm aanpassen</string>
-  <string name="custom_screencolor">Aangepaste schermkleur</string>
-  <string name="screencolor_save">Opslaan</string>
-  <string name="screencolor_cancel">Annuleren</string>
-  <string name="restore_preview">Standaardfoto bekijken</string>
-  <string name="selectnewfile_menu">Nieuwe foto uit Galerij bekijken</string>
-  <string name="selectfile_menu">Foto uit Galerij bekijken</string>
-  <string name="restore_default_str">Opnieuw instellen</string>
-  <string name="hue_str">Tint: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">Verzadiging: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">Contrast: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">Intensiteit: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">Standaard</string>
-  <string name="screen_color_vivid">Levendig</string>
-  <string name="screen_color_custom">Aangepast</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">Uw scherm optimaliseren aan de hand van tijdstip op de dag en lichtomstandigheden om de leesbaarheid te verbeteren en oogvermoeidheid te verminderen</string>
   <string name="live_display_mode">Weergavemodus</string>
@@ -621,6 +603,12 @@
   <string name="live_display_color_profile_photography_summary">Perfecte kleurweergave voor foto\'s</string>
   <string name="live_display_color_profile_basic_title">Basis</string>
   <string name="live_display_color_profile_basic_summary">Scherm ongekalibreerd gebruiken</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="picture_adjustment_summary">Tint, verzadiging, intensiteit en contrast aanpassen</string>
+  <string name="adj_hue_title">Tint</string>
+  <string name="adj_saturation_title">Verzadiging</string>
+  <string name="adj_intensity_title">Intensiteit</string>
+  <string name="adj_contrast_title">Contrast</string>
   <!-- Whether to display IME switcher notifcation -->
   <string name="ime_switcher_notify">Melding invoermethode</string>
   <string name="ime_switcher_notify_summary">Invoermethodepictogram weergeven</string>
@@ -1019,6 +1007,10 @@
   <string name="allow_background_wlan">Alleen via wifi</string>
   <string name="allow_background_none">Geen toegang</string>
   <string name="reset_stats_confirm">Bevestigen</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <!-- title for lock screen blur preference -->
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">Weer weergeven</string>
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">Weergeven op vergrendelingsscherm</string>
   <string name="app_notification_show_on_keyguard_summary">Meldingen van deze app weergeven op het vergrendelingsscherm</string>
@@ -1026,6 +1018,8 @@
   <string name="app_notification_no_ongoing_on_keyguard_summary">Permanente meldingen van deze app niet weergeven op het vergrendelingsscherm</string>
   <!-- CmRadioInfo -->
   <!-- Radio Control (IMS/MBN etc.) -->
+  <!-- Lock screen wallpaper -->
+  <string name="lockscreen_wallpaper_title">Achtergrond</string>
   <!-- Format string for fingerprint location message -->
   <!-- Fingerprint sensor locations -->
   <!-- SIM status format string -->

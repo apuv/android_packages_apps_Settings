@@ -30,6 +30,7 @@
   <string name="root_access_apps">僅限應用程式</string>
   <string name="root_access_adb">僅限 ADB</string>
   <string name="root_access_all">應用程式和 ADB</string>
+  <!-- Preference link for root appops -->
   <!-- NFC PreferenceCategory title -->
   <!-- About phone screen, CyanogenMod version -->
   <string name="mod_version">CyanogenMod 版本</string>
@@ -43,6 +44,7 @@
   <string name="build_date">版本日期</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">CyanogenMod 更新</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">升級 Cyanogen 修復模式</string>
   <string name="update_recovery_summary">系統更新的同時更新修復模式</string>
@@ -435,6 +437,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">啟用螢幕上的導覽列</string>
   <string name="disable_navkeys_summary">啟用螢幕上的導覽列和停用硬件按鈕</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">輕按兩下來喚醒</string>
+  <string name="double_tap_to_wake_summary">按兩下螢幕來開啟顯示器</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">按兩下進入休眠</string>
   <string name="double_tap_to_sleep_summary">按兩下狀態列來關閉顯示器</string>
@@ -450,21 +455,12 @@
   <!-- Volume settings - Volume adjustment sound -->
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">震動強度</string>
-  <string name="vibrator_warning">不建議超過 %1$d 的數值</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">顏色校準</string>
   <string name="color_calibration_summary">校準螢幕顏色</string>
   <string name="color_red_title">紅色</string>
   <string name="color_green_title">綠色</string>
   <string name="color_blue_title">藍色</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">伽瑪校準</string>
-  <string name="gamma_tuning_summary_head">調校伽瑪值</string>
-  <string name="gamma_tuning_control_set_header"><xliff:g id="index">%d</xliff:g>群組</string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">對比度</string>
-  <string name="gamma_tuning_brightness">亮度</string>
-  <string name="gamma_tuning_saturation">飽和度</string>
   <!-- Launch music player when headset is connected -->
   <!-- WiFi auto-configure priorities -->
   <string name="wifi_auto_config_priorities">自動優先順序</string>
@@ -479,23 +475,6 @@
   <string name="display_rotation_90_title">90 度</string>
   <string name="display_rotation_180_title">180 度</string>
   <string name="display_rotation_270_title">270 度</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">螢幕顏色</string>
-  <string name="screencolor_summary">調整螢幕色調、 飽和度、 對比度或強度</string>
-  <string name="custom_screencolor">自訂螢幕顏色</string>
-  <string name="screencolor_save">儲存</string>
-  <string name="screencolor_cancel">取消</string>
-  <string name="restore_preview">檢視預設圖片</string>
-  <string name="selectnewfile_menu">從圖片庫查看新圖片</string>
-  <string name="selectfile_menu">從圖片庫查看圖片</string>
-  <string name="restore_default_str">重設</string>
-  <string name="hue_str">色調： <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">飽和度：<xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">對比度：<xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">強度：<xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">標準</string>
-  <string name="screen_color_vivid">鮮明</string>
-  <string name="screen_color_custom">自訂</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">您可根據每日時間和環境條件來優化螢幕顯示，以提升可讀性和減少眼睛疲勞</string>
   <string name="live_display_mode">顯示模式</string>
@@ -520,6 +499,9 @@
   <string name="live_display_color_profile_cinema_title">電影</string>
   <string name="live_display_color_profile_astronomy_title">天文學</string>
   <string name="live_display_color_profile_astronomy_summary">深紅色保護夜間視力</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="adj_saturation_title">飽和度</string>
+  <string name="adj_contrast_title">對比度</string>
   <!-- Whether to display IME switcher notifcation -->
   <!-- Heads up -->
   <string name="heads_up_notifications">浮動通知</string>
@@ -837,6 +819,10 @@
   <string name="battery_info_status_charging_dock_usb">正在透過 USB 插口充電</string>
   <!-- Weather -->
   <string name="weather_settings_general_settings_title">一般</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <!-- title for lock screen blur preference -->
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">顯示天氣</string>
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">在鎖定螢幕上顯示</string>
   <string name="app_notification_show_on_keyguard_summary">在鎖定螢幕中顯示此應用程式的通知</string>
@@ -844,6 +830,7 @@
   <string name="app_notification_no_ongoing_on_keyguard_summary">在鎖定螢幕上不再顯示來自此應用程式的持久通知</string>
   <!-- CmRadioInfo -->
   <!-- Radio Control (IMS/MBN etc.) -->
+  <!-- Lock screen wallpaper -->
   <!-- Format string for fingerprint location message -->
   <!-- Fingerprint sensor locations -->
   <!-- SIM status format string -->

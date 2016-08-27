@@ -30,6 +30,7 @@
   <string name="root_access_apps">শুধু মাত্র অ্যাপস</string>
   <string name="root_access_adb">শুধু মাত্র এডিবি</string>
   <string name="root_access_all">অ্যাপস এবং এডিবি</string>
+  <!-- Preference link for root appops -->
   <!-- NFC PreferenceCategory title -->
   <!-- About phone screen, CyanogenMod version -->
   <string name="mod_version">সায়ানোজেনমড সংস্করণ</string>
@@ -42,6 +43,7 @@
   <string name="build_date">তৈরী তারিখ</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">সায়ানোজেনমড আধুনিকীকরণ</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <!-- Themes Settings -->
   <!-- Settings main menu entry -->
@@ -342,6 +344,8 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">অন-স্ক্রীন নেভ বার সক্রিয় করুন</string>
   <string name="disable_navkeys_summary">অন-স্ক্রীন নেভিগেশন বার সক্রিয় করুন এবং হার্ডওয়্যার বোতাম নিষ্ক্রিয় করুন</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">দুইবার টোকা দিয়ে জাগ্রত করুন</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">দুই টোকা দিয়ে নিদ্রা</string>
   <!-- Proximity wake -->
@@ -356,18 +360,12 @@
   <!-- Volume settings - Volume adjustment sound -->
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">কম্পক তীব্রতা</string>
-  <string name="vibrator_warning">মান %1$d এর বেশী গ্রহণযোগ্য নয়</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">রং এর পরিমাপ</string>
   <string name="color_calibration_summary">পর্দার রং এর শক্তির পরিমাপ</string>
   <string name="color_red_title">লাল</string>
   <string name="color_green_title">সবুজ</string>
   <string name="color_blue_title">নীল</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">গামা শক্তির পরিমাপ</string>
-  <string name="gamma_tuning_summary_head">টুইক গামার মান</string>
-  <string name="gamma_tuning_control_set_header">গ্রুপ <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
   <!-- Launch music player when headset is connected -->
   <!-- WiFi auto-configure priorities -->
   <string name="auto_brightness_reset_button">পুনরায় ধার্য করুন</string>
@@ -381,21 +379,8 @@
   <string name="display_rotation_90_title">৯০ ডিগ্রী</string>
   <string name="display_rotation_180_title">১৮০ ডিগ্রী</string>
   <string name="display_rotation_270_title">২৭০ ডিগ্রী</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">পর্দার রঙ</string>
-  <string name="custom_screencolor">পছন্দসই পর্দার রঙ</string>
-  <string name="screencolor_save">সংরক্ষণ</string>
-  <string name="screencolor_cancel">বাতিল</string>
-  <string name="restore_preview">পূর্ব-নির্ধারিত চিত্র প্রদর্শন</string>
-  <string name="selectnewfile_menu">গ্যালারী থেকে নতুন চিত্র প্রদর্শন</string>
-  <string name="selectfile_menu">গ্যালারী থেকে চিত্র প্রদর্শন</string>
-  <string name="restore_default_str">পুনরায় ধার্য করুন</string>
-  <string name="hue_str">হিউঃ <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">সম্পৃক্তিঃ <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">বৈপরীত্যঃ <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">তীব্রতাঃ <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_custom">পছন্দসই</string>
   <!-- LiveDisplay -->
+  <!-- LiveDisplay : Picture Adjustment -->
   <!-- Whether to display IME switcher notifcation -->
   <!-- Heads up -->
   <!-- Bluetooth settings.  A checkbox to set if we should accept all the file types regardless of their presence in MIME type whitelist -->
@@ -561,9 +546,13 @@
   <!-- [CHAR_LIMIT=20] Battery use screen. Battery status shown in chart label when charging over Dock USB. -->
   <!-- Weather -->
   <string name="weather_settings_general_settings_title">সাধারণ</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <!-- title for lock screen blur preference -->
+  <!-- title for lock screen weather preference -->
   <!-- Per app controls for LP keyguard notifications -->
   <!-- CmRadioInfo -->
   <!-- Radio Control (IMS/MBN etc.) -->
+  <!-- Lock screen wallpaper -->
   <!-- Format string for fingerprint location message -->
   <!-- Fingerprint sensor locations -->
   <!-- SIM status format string -->

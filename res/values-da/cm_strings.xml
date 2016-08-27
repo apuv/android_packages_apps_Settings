@@ -38,6 +38,7 @@
   <string name="root_access_apps">Kun apps</string>
   <string name="root_access_adb">Kun ADB</string>
   <string name="root_access_all">Apps og ADB</string>
+  <!-- Preference link for root appops -->
   <!-- NFC PreferenceCategory title -->
   <string name="nfc_title_category">NFC</string>
   <!-- About phone screen, CyanogenMod version -->
@@ -54,6 +55,7 @@
   <string name="build_date">Kørselsdato</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">CyanogenMod-opdateringer</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">Opdatér Cyanogen recovery</string>
   <string name="update_recovery_summary">Opdatér recovery med systemopdateringer</string>
@@ -524,6 +526,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">Aktivér navigationslinje</string>
   <string name="disable_navkeys_summary">Aktivér navigationslinje på skærmen og deaktivér hardwareknapper</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">Dobbelttryk for at vække</string>
+  <string name="double_tap_to_wake_summary">Dobbelttryk på skærmen for at tænde den</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">Dobbelttryk for dvale</string>
   <string name="double_tap_to_sleep_summary">Dobbelttryk på statuslinjen for at slukke skærmen</string>
@@ -540,21 +545,12 @@
   <string name="volume_adjust_sounds_title">Lyd for lydstyrkejustering</string>
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">Vibrator-intensitet</string>
-  <string name="vibrator_warning">Værdier højere end %1$d anbefales ikke</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">Farvekalibrering</string>
   <string name="color_calibration_summary">Kalibrér skærmfarver</string>
   <string name="color_red_title">Rød</string>
   <string name="color_green_title">Grøn</string>
   <string name="color_blue_title">Blå</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">Gamma-kalibrering</string>
-  <string name="gamma_tuning_summary_head">Finindstil gammaværdier</string>
-  <string name="gamma_tuning_control_set_header">Gruppe <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">Kontrast</string>
-  <string name="gamma_tuning_brightness">Lysstyrke</string>
-  <string name="gamma_tuning_saturation">Farvemætning</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">Start musik-app</string>
   <string name="headset_connect_player_summary">Start standard-app til musik, når headset tilsluttes</string>
@@ -571,23 +567,6 @@
   <string name="display_rotation_90_title">90 grader</string>
   <string name="display_rotation_180_title">180 grader</string>
   <string name="display_rotation_270_title">270 grader</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">Skærmfarve</string>
-  <string name="screencolor_summary">Indstil skærmens nuance, mætning, kontrast eller intensitet</string>
-  <string name="custom_screencolor">Tilpasset skærmfarve</string>
-  <string name="screencolor_save">Gem</string>
-  <string name="screencolor_cancel">Annuller</string>
-  <string name="restore_preview">Vis standardbillede</string>
-  <string name="selectnewfile_menu">Vis nyt billede fra Galleri</string>
-  <string name="selectfile_menu">Vis billede fra Galleri</string>
-  <string name="restore_default_str">Nulstil</string>
-  <string name="hue_str">Farvetone: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">Farvemætning: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">Kontrast: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">Intensitet: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">Standard</string>
-  <string name="screen_color_vivid">Levende</string>
-  <string name="screen_color_custom">Egen</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">Optimér din skærm baseret på tidspunktet på dagen, samt omgivelserne, for at forbedre læsbarheden og nedsætte anstrengelsen af øjnene</string>
   <string name="live_display_mode">Visningstilstand</string>
@@ -617,6 +596,9 @@
   <string name="live_display_color_profile_photography_summary">Perfekt farvegengivelse for fotos</string>
   <string name="live_display_color_profile_basic_title">Grundlæggende</string>
   <string name="live_display_color_profile_basic_summary">Brug skærmen ukalibreret</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="adj_saturation_title">Farvemætning</string>
+  <string name="adj_contrast_title">Kontrast</string>
   <!-- Whether to display IME switcher notifcation -->
   <string name="ime_switcher_notify">Ikon for valg</string>
   <string name="ime_switcher_notify_summary">Vis ikon til valg af input-metode</string>
@@ -1021,6 +1003,12 @@
   <string name="restrict_cellular_access_title">Begræns adgang for mobildata</string>
   <string name="restrict_cellular_access_summary">Deaktiver adgang til data på mobilnetværk</string>
   <string name="restrict_cellular_access_dialog_title">Begræns adgang for mobildata?</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <string name="shortcut_carrier_title">Netværksoperatører</string>
+  <!-- title for lock screen blur preference -->
+  <string name="lockscreen_blur_enabled_title">Sløring af baggrund</string>
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">Vis vejr</string>
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">Vis på låseskærmen</string>
   <string name="app_notification_show_on_keyguard_summary">Vis meddelelser fra denne app på låseskærmen</string>
@@ -1041,6 +1029,8 @@
   <string name="cm_radio_info_adb_log_off_label">Slå ADB radio log til</string>
   <string name="cm_radio_info_diag_log_on_label">Slå Diag log fra</string>
   <string name="cm_radio_info_diag_log_off_label">Slå Diag log til</string>
+  <!-- Lock screen wallpaper -->
+  <string name="lockscreen_wallpaper_title">Baggrund</string>
   <string name="not_available_with_app">Ikke tilgængelig med %1$s</string>
   <!-- Format string for fingerprint location message -->
   <!-- Fingerprint sensor locations -->

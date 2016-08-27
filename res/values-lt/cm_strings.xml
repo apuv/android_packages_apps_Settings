@@ -39,6 +39,7 @@
   <string name="root_access_apps">Tik programos</string>
   <string name="root_access_adb">Tik „Android“ derinimas</string>
   <string name="root_access_all">Programos ir „Android“ derinimas</string>
+  <!-- Preference link for root appops -->
   <!-- NFC PreferenceCategory title -->
   <string name="nfc_title_category">NFC</string>
   <!-- About phone screen, CyanogenMod version -->
@@ -54,6 +55,7 @@
   <string name="build_date">Surinkimo data</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">„CyanogenMod“ atnaujinimai</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">Atnaujinti „Cyanogen“ atkūrimo programą</string>
   <string name="update_recovery_summary">Atnaujinti atkūrimo programą kartu su sistemos atnaujinimais</string>
@@ -465,6 +467,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">Įgalinti ekranine naršymo juostą</string>
   <string name="disable_navkeys_summary">Įgalinti ekranine naršymo juostą ir neleisti aparatūros mygtukų</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">Dukart bakstelėti, kad pažadinti</string>
+  <string name="double_tap_to_wake_summary">Dukart bakstelėti ekraną, kad jį ijungti</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">Dukart bakstelėti, kad užmigdyti</string>
   <string name="double_tap_to_sleep_summary">Dukart bakstelėti būsenos juostą, kad išjungti ekraną</string>
@@ -481,21 +486,12 @@
   <string name="volume_adjust_sounds_title">Garsumo reguliavimo garsai</string>
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">Vibravimo intensyvumas</string>
-  <string name="vibrator_warning">Vertės didesnės nei %1$d yra nerekomenduojamos</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">Spalvų kalibravimas</string>
   <string name="color_calibration_summary">Kalibruoti ekranines spalvas</string>
   <string name="color_red_title">Raudona</string>
   <string name="color_green_title">Žalia</string>
   <string name="color_blue_title">Mėlyna</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">Gama kalibravimas</string>
-  <string name="gamma_tuning_summary_head">Reguliuoti gama reikšmes</string>
-  <string name="gamma_tuning_control_set_header">Grupė <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">Kontrastas</string>
-  <string name="gamma_tuning_brightness">Šviesumas</string>
-  <string name="gamma_tuning_saturation">Saturacija</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">Paleisti muzikos programą</string>
   <string name="headset_connect_player_summary">Paleisti numatytąją muzikos programą, kai prijungiama laisvų rankų įranga</string>
@@ -512,23 +508,6 @@
   <string name="display_rotation_90_title">90 laipsnių</string>
   <string name="display_rotation_180_title">180 laipsnių</string>
   <string name="display_rotation_270_title">270 laipsnių</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">Ekrano spalva</string>
-  <string name="screencolor_summary">Nustatyti ekrano atspalvį, saturaciją, kontrastą arba intensyvumą</string>
-  <string name="custom_screencolor">Tinkinta ekrano spalva</string>
-  <string name="screencolor_save">Išsaugoti</string>
-  <string name="screencolor_cancel">Atšaukti</string>
-  <string name="restore_preview">Žiūrėti numatytąjį vaizdą</string>
-  <string name="selectnewfile_menu">Žiūrėti naują vaizdą iš galerijos</string>
-  <string name="selectfile_menu">Žiūrėti vaizdą iš galerijos</string>
-  <string name="restore_default_str">Atstatyti</string>
-  <string name="hue_str">Atspalvis: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">Saturacija: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">Kontrastas: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">Intensyvumas: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">Standartinis</string>
-  <string name="screen_color_vivid">Ryškus</string>
-  <string name="screen_color_custom">Priskirtas</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">Optimizuoti ekraną remiantis paros metu ir aplinkos sąlygomis, siekiant pagerinti įskaitomumą ir sumažinti akių įtampą</string>
   <string name="live_display_mode">Rodymo režimas</string>
@@ -553,6 +532,9 @@
   <string name="live_display_color_profile_cinema_title">Kinas</string>
   <string name="live_display_color_profile_astronomy_title">Astronomija</string>
   <string name="live_display_color_profile_astronomy_summary">Tamsiai raudonos spalvos, saugoti naktinį matymą</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="adj_saturation_title">Saturacija</string>
+  <string name="adj_contrast_title">Kontrastas</string>
   <!-- Whether to display IME switcher notifcation -->
   <string name="ime_switcher_notify">Pasirinkimo piktograma</string>
   <string name="ime_switcher_notify_summary">Rodyti įvesties metodo pasirinkimo piktogramą</string>
@@ -897,6 +879,10 @@
   <string name="battery_info_status_charging_dock_usb">Įkraunama per USB doką</string>
   <!-- Weather -->
   <string name="weather_settings_general_settings_title">Bendra</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <!-- title for lock screen blur preference -->
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">Rodyti orus</string>
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">Rodyti ekrano užrakte</string>
   <string name="app_notification_show_on_keyguard_summary">Rodyti pranešimus iš šios programos ekrano užrakte</string>
@@ -904,6 +890,7 @@
   <string name="app_notification_no_ongoing_on_keyguard_summary">Niekada nerodyti nuolatinių pranešimų iš šios programos ekrano užrakte</string>
   <!-- CmRadioInfo -->
   <!-- Radio Control (IMS/MBN etc.) -->
+  <!-- Lock screen wallpaper -->
   <!-- Format string for fingerprint location message -->
   <!-- Fingerprint sensor locations -->
   <!-- SIM status format string -->

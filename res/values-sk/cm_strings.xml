@@ -39,6 +39,7 @@
   <string name="root_access_apps">Iba aplikácie</string>
   <string name="root_access_adb">Iba ADB</string>
   <string name="root_access_all">Aplikácie a ADB</string>
+  <!-- Preference link for root appops -->
   <!-- NFC PreferenceCategory title -->
   <string name="nfc_title_category">NFC</string>
   <!-- About phone screen, CyanogenMod version -->
@@ -54,6 +55,7 @@
   <string name="build_date">Dátum zostavy</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">Aktualizácie CyanogenMod</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">Aktualizovať Cyanogen recovery</string>
   <string name="update_recovery_summary">Aktualizovať recovery s aktualizáciami systému</string>
@@ -465,6 +467,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">Povoliť navigačný panel na obrazovke</string>
   <string name="disable_navkeys_summary">Povoliť navigačný panel na obrazovke a zakázať hardvérové tlačidlá</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">Prebudiť dvojitým poklepaním</string>
+  <string name="double_tap_to_wake_summary">Zapnúť displej dvojitým poklepaním na obrazovku</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">Uspať dvojitým poklepaním</string>
   <string name="double_tap_to_sleep_summary">Vypnúť displej dvojitým poklepaním na stavový riadok</string>
@@ -481,21 +486,12 @@
   <string name="volume_adjust_sounds_title">Zvuk pri úprave hlasitosti</string>
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">Intenzita vibrácií</string>
-  <string name="vibrator_warning">Hodnoty vyššie než %1$d nie sú odporúčané</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">Kalibrácia farieb</string>
   <string name="color_calibration_summary">Kalibrovať farby na obrazovke</string>
   <string name="color_red_title">Červená</string>
   <string name="color_green_title">Zelená</string>
   <string name="color_blue_title">Modrá</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">Kalibrácia gamma</string>
-  <string name="gamma_tuning_summary_head">Vylepšiť hodnoty gamma</string>
-  <string name="gamma_tuning_control_set_header">Skupina <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">Kontrast</string>
-  <string name="gamma_tuning_brightness">Jas</string>
-  <string name="gamma_tuning_saturation">Sýtosť</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">Spustiť aplikáciu na prehrávanie hudby</string>
   <string name="headset_connect_player_summary">Spustiť predvolenú aplikáciu na prehrávanie hudby po pripojení slúchadiel</string>
@@ -512,23 +508,6 @@
   <string name="display_rotation_90_title">90 stupňov</string>
   <string name="display_rotation_180_title">180 stupňov</string>
   <string name="display_rotation_270_title">270 stupňov</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">Farba obrazovky</string>
-  <string name="screencolor_summary">Upraviť tón, sýtosť, kontrast alebo intenzitu displeja</string>
-  <string name="custom_screencolor">Vlastná farba obrazovky</string>
-  <string name="screencolor_save">Uložiť</string>
-  <string name="screencolor_cancel">Zrušiť</string>
-  <string name="restore_preview">Zobraziť predvolený obrázok</string>
-  <string name="selectnewfile_menu">Zobraziť nový obrázok z Galérie</string>
-  <string name="selectfile_menu">Zobraziť obrázok z Galérie</string>
-  <string name="restore_default_str">Obnoviť</string>
-  <string name="hue_str">Odtieň: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">Sýtosť: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">Kontrast: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">Intenzita: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">Štandardná</string>
-  <string name="screen_color_vivid">Sýta</string>
-  <string name="screen_color_custom">Vlastná</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">Optimalizovať vašu obrazovku na základe dennej doby a podmienok okolia na zlepšenie čitateľnosti a zníženie únavy očí</string>
   <string name="live_display_mode">Režim zobrazenia</string>
@@ -553,6 +532,9 @@
   <string name="live_display_color_profile_cinema_title">Kino</string>
   <string name="live_display_color_profile_astronomy_title">Astronómia</string>
   <string name="live_display_color_profile_astronomy_summary">Tmavo červená pre zachovanie nočného videnia</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="adj_saturation_title">Sýtosť</string>
+  <string name="adj_contrast_title">Kontrast</string>
   <!-- Whether to display IME switcher notifcation -->
   <string name="ime_switcher_notify">Ikona výberu metódy vstupu</string>
   <string name="ime_switcher_notify_summary">Zobraziť ikony výberu metódy vstupu</string>
@@ -897,6 +879,10 @@
   <string name="battery_info_status_charging_dock_usb">Nabíjení pomocí USB doku</string>
   <!-- Weather -->
   <string name="weather_settings_general_settings_title">Všeobecné</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <!-- title for lock screen blur preference -->
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">Zobraziť počasie</string>
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">Zobraziť na obrazovke uzamknutia</string>
   <string name="app_notification_show_on_keyguard_summary">Zobraziť oznámenia z tejto aplikácie na uzamknutej obrazovke</string>
@@ -904,6 +890,7 @@
   <string name="app_notification_no_ongoing_on_keyguard_summary">Nezobrazovať trvalé oznámenia z tejto aplikácie na obrazovke uzamknutia</string>
   <!-- CmRadioInfo -->
   <!-- Radio Control (IMS/MBN etc.) -->
+  <!-- Lock screen wallpaper -->
   <!-- Format string for fingerprint location message -->
   <!-- Fingerprint sensor locations -->
   <!-- SIM status format string -->

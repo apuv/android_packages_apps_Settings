@@ -38,6 +38,7 @@
   <string name="root_access_apps">பயன்பாடுகள் மட்டும்</string>
   <string name="root_access_adb">ADB மட்டும்</string>
   <string name="root_access_all">ஆப்கள் மற்றும் ADB</string>
+  <!-- Preference link for root appops -->
   <!-- NFC PreferenceCategory title -->
   <string name="nfc_title_category">NFC</string>
   <!-- About phone screen, CyanogenMod version -->
@@ -54,6 +55,7 @@
   <string name="build_date">கட்டிய தேதி</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">CyanogenMod புதுப்பித்தல்கள்</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">Cyanogen மீட்டலை புதுப்பி</string>
   <string name="update_recovery_summary">சிஸ்டம் புதுப்பித்தல்களுடன் மீட்டலை புதுப்பி</string>
@@ -527,6 +529,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">திரை மீதான உலாவி பட்டையை செயல்படுத்துக</string>
   <string name="disable_navkeys_summary">திரை மீதான உலாவி பட்டையை செயல்படுத்தி வன்பொருள் பட்டனை முடக்குக</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">விழிப்பூட்ட இருமுறை தட்டு</string>
+  <string name="double_tap_to_wake_summary">காட்சியை ஆன் செய்ய திரையை இருமுறை தட்டுக</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">உறங்குவதற்கு இருமுறை தட்டு</string>
   <string name="double_tap_to_sleep_summary">காட்சியை ஆஃப் செய்ய நிலை பட்டை மீது இருமுறை தட்டு</string>
@@ -543,21 +548,12 @@
   <string name="volume_adjust_sounds_title">வால்யூம் சரிசெய்தல் ஆடியோகள்</string>
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">அதிர்வான் அளவு</string>
-  <string name="vibrator_warning">%1$dஐவிட உயர்வான மதிப்புகள் பரிந்துரைக்கப்படுவதில்லை</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">நிற அளவிடுதல்</string>
   <string name="color_calibration_summary">திரைமீதுள்ள நிறங்களை அளவிடு</string>
   <string name="color_red_title">சிவப்பு</string>
   <string name="color_green_title">பச்சை</string>
   <string name="color_blue_title">நீலம்</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">காமா அளவிடுதல்</string>
-  <string name="gamma_tuning_summary_head">டிவீக் காமா மதிப்புகள்</string>
-  <string name="gamma_tuning_control_set_header">குழு <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">மாறுபாடு</string>
-  <string name="gamma_tuning_brightness">ஒளிர்வு</string>
-  <string name="gamma_tuning_saturation">சாச்சுரேசன்</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">இசை ஆப்-ஐ தொடங்குக</string>
   <string name="headset_connect_player_summary">ஹெட்செட் இணைக்கப்பட்டு இருக்கும்போது இயல்நிலை இசை ஆப்-ஐ தொடங்குக</string>
@@ -574,23 +570,6 @@
   <string name="display_rotation_90_title">90 டிகிரீ</string>
   <string name="display_rotation_180_title">180 டிகிரீ</string>
   <string name="display_rotation_270_title">270 டிகிரீ</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">திரை நிறம்</string>
-  <string name="screencolor_summary">திரை வண்ணக்கூறு, கான்டிராஸ்ட் அல்லது தீவிரத்தை டியூன் செய்</string>
-  <string name="custom_screencolor">தனிப்பயனாக்கப்பட்ட திரை நிறம்</string>
-  <string name="screencolor_save">சேமி</string>
-  <string name="screencolor_cancel">ரத்துசெய்</string>
-  <string name="restore_preview">இயல்நிலை படத்தை காண்</string>
-  <string name="selectnewfile_menu">கேலரியில் இருந்து புது படத்தைக் காண்</string>
-  <string name="selectfile_menu">கேலரியில் இருநந்து படத்தைக் காண்</string>
-  <string name="restore_default_str">மீட்டமை</string>
-  <string name="hue_str">வண்ணக்கூறு: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">சாச்சுரேசன்: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">கான்டிராஸ்ட்: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">இன்டென்சிட்டி: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">நிலையான</string>
-  <string name="screen_color_vivid">தெளிவு</string>
-  <string name="screen_color_custom">தனிப்பயன்</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">வாசிக்கும்தன்மையை மேம்படுத்தவும் கண்ணுக்கு சிரமத்தை குறைக்கவும் நாளின் நேரத்தையும் சுற்றுச்சூழல் நிலைமைகளையும் பொருத்து உங்கள் திரையை உகந்ததாக்குங்கள்</string>
   <string name="live_display_mode">காட்சி முறை</string>
@@ -620,6 +599,9 @@
   <string name="live_display_color_profile_photography_summary">புகைப்படங்களுக்கான கச்சிதமான வண்ன மறு உருவாக்கம்</string>
   <string name="live_display_color_profile_basic_title">அடிப்படை</string>
   <string name="live_display_color_profile_basic_summary">காட்சியை அளவிடாமல் பயன்படுத்து</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="adj_saturation_title">சாச்சுரேசன்</string>
+  <string name="adj_contrast_title">மாறுபாடு</string>
   <!-- Whether to display IME switcher notifcation -->
   <string name="ime_switcher_notify">தேர்ந்தெடுக்கும் ஐகான்</string>
   <string name="ime_switcher_notify_summary">உள்ளீட்டு முறை தேர்ந்தெடுத்தல் ஐகானை காட்டு</string>
@@ -1009,6 +991,10 @@
   <string name="battery_info_status_charging_dock_usb">டாக் USB மீது சார்ஜ் செய்கிறது</string>
   <!-- Weather -->
   <string name="weather_settings_general_settings_title">பொது</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <!-- title for lock screen blur preference -->
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">வானிலையை காட்டு</string>
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">லாக் திரையில் காட்டு</string>
   <string name="app_notification_show_on_keyguard_summary">லாக் திரையில் இந்த பயன்பாடு-இல் இருந்து அறிவுறுத்தல்களை காட்டு</string>
@@ -1016,6 +1002,7 @@
   <string name="app_notification_no_ongoing_on_keyguard_summary">இந்த பயன்பாடு-இல் இருந்து  விடாப்பிடியான அறிவுறுத்தலை பூட்டுத் திரையில் எப்போதும் காட்டாதே</string>
   <!-- CmRadioInfo -->
   <!-- Radio Control (IMS/MBN etc.) -->
+  <!-- Lock screen wallpaper -->
   <!-- Format string for fingerprint location message -->
   <!-- Fingerprint sensor locations -->
   <!-- SIM status format string -->

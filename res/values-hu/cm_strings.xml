@@ -38,6 +38,9 @@
   <string name="root_access_apps">Csak alkalmazások</string>
   <string name="root_access_adb">Csak ADB</string>
   <string name="root_access_all">Alkalmazások és ADB</string>
+  <!-- Preference link for root appops -->
+  <string name="root_appops_title">Root hozzáférések kezelése</string>
+  <string name="root_appops_summary">Root szabályok megtekintése és kezelése</string>
   <!-- NFC PreferenceCategory title -->
   <string name="nfc_title_category">NFC</string>
   <!-- About phone screen, CyanogenMod version -->
@@ -54,6 +57,7 @@
   <string name="build_date">Build dátuma</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">CyanogenMod frissítések</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">CM recovery frissítése</string>
   <string name="update_recovery_summary">Rendszerfrissítések telepítése közben frissítse a recovery-t</string>
@@ -273,6 +277,7 @@
   <!-- Lights settings, LED notification -->
   <string name="led_notification_title">LED beállítások</string>
   <string name="led_notification_text">LED fény engedélyezve</string>
+  <string name="notification_light_no_apps_summary">Alkalmazásonkénti vezérléshez aktiválja: \"%1$s\" és nyomja meg \"\u002b\" jelet a menüsávon</string>
   <!-- Setting checkbox title for Whether to enable Android debugging support on the phone. -->
   <string name="enable_adb_cm">Android hibakeresés</string>
   <!-- Setting checkbox summary for Whether to enable Android debugging support on the phone -->
@@ -529,6 +534,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">Navigációs sáv engedélyezése</string>
   <string name="disable_navkeys_summary">Navigációs sáv engedélyezése és a hardveres gombok letiltása</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">Dupla érintésre felébresztés</string>
+  <string name="double_tap_to_wake_summary">Érintse meg kétszer a képernyőt a kijelző bekapcsolásához</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">Dupla érintésre alvó mód</string>
   <string name="double_tap_to_sleep_summary">Érintse meg kétszer az állapotsávot a kijelző kikapcsolásához</string>
@@ -545,21 +553,13 @@
   <string name="volume_adjust_sounds_title">Hangerő állítási hangok</string>
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">Rezgés erőssége</string>
-  <string name="vibrator_warning">Nem ajánlott %1$d százaléknál nagyobbra állítani</string>
+  <string name="vibrator_warning">Nem ajánlott %1$d%% feletti értékre állítani</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">Színek kalibrálása</string>
   <string name="color_calibration_summary">Képernyőn megjelenő színek kalibrálása</string>
   <string name="color_red_title">Vörös</string>
   <string name="color_green_title">Zöld</string>
   <string name="color_blue_title">Kék</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">Gamma kalibrálás</string>
-  <string name="gamma_tuning_summary_head">Gamma értékek finomhangolása</string>
-  <string name="gamma_tuning_control_set_header">Csoport <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">Kontraszt</string>
-  <string name="gamma_tuning_brightness">Fényerő</string>
-  <string name="gamma_tuning_saturation">Telítettség</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">Zenelejátszó indítása</string>
   <string name="headset_connect_player_summary">Alapértelmezett zenelejátszó elindítása fülhallgató csatlakoztatásakor</string>
@@ -576,23 +576,6 @@
   <string name="display_rotation_90_title">90 fok</string>
   <string name="display_rotation_180_title">180 fok</string>
   <string name="display_rotation_270_title">270 fok</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">Képernyő színe</string>
-  <string name="screencolor_summary">Képernyő színárnyalat, színtelítettség, kontraszt, vagy intenzitás hangolása</string>
-  <string name="custom_screencolor">Egyéni képernyő színek</string>
-  <string name="screencolor_save">Mentés</string>
-  <string name="screencolor_cancel">Mégsem</string>
-  <string name="restore_preview">Alapértelmezett kép megtekintése</string>
-  <string name="selectnewfile_menu">Új kép megtekintése a galériából</string>
-  <string name="selectfile_menu">Kép megtekintése a galériából</string>
-  <string name="restore_default_str">Visszaállítás</string>
-  <string name="hue_str">Színárnyalat: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">Telítettség: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">Kontraszt: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">Intenzitás: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">Hagyományos</string>
-  <string name="screen_color_vivid">Élénk</string>
-  <string name="screen_color_custom">Egyéni</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">Optimalizálja a képernyőt a napszaknak és a fényviszonyoknak megfelelően, javítva az olvashatóságot és csökkentve a szemek terhelését</string>
   <string name="live_display_mode">Képernyő mód</string>
@@ -622,6 +605,15 @@
   <string name="live_display_color_profile_photography_summary">Tökéletes színreprodukció fotókhoz</string>
   <string name="live_display_color_profile_basic_title">Alap</string>
   <string name="live_display_color_profile_basic_summary">Kijelző használata kalibrálatlanul</string>
+  <string name="live_display_color_profile_adaptive_title">Adaptív</string>
+  <string name="live_display_color_profile_adaptive_summary">Színek alkalmazkodnak a környezethez</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="picture_adjustment_title">Kép beállítása</string>
+  <string name="picture_adjustment_summary">Árnyalat, telítettség, intenzitás és kontraszt beállítása</string>
+  <string name="adj_hue_title">Árnyalat</string>
+  <string name="adj_saturation_title">Telítettség</string>
+  <string name="adj_intensity_title">Intenzitás</string>
+  <string name="adj_contrast_title">Kontraszt</string>
   <!-- Whether to display IME switcher notifcation -->
   <string name="ime_switcher_notify">Választó ikon</string>
   <string name="ime_switcher_notify_summary">Beviteli mód választó ikon megjelenítése</string>
@@ -1042,6 +1034,12 @@
   <string name="restrict_cellular_access_summary">Adathozzáférés tiltása mobilhálózatokon</string>
   <string name="restrict_cellular_access_dialog_title">Korlátozza a mobilhálózati hozzáférést?</string>
   <string name="restrict_cellular_access_dialog_summary">Ez a funkció bizonyos alkalmazások működésképtelenségét okozhatja, amelyek a hálózathoz való hozzáféréssel működnek és csak a mobilnet elérhető.\n\nMegfelelőbb adathasználati vezérlőket az alkalmazáson belüli beállításokban találhat.</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <string name="shortcut_carrier_title">Hálózati üzemeltetők</string>
+  <!-- title for lock screen blur preference -->
+  <string name="lockscreen_blur_enabled_title">Háttér életlenítés</string>
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">Időjárás megjelenítése</string>
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">Megjelenítés a zárképernyőn</string>
   <string name="app_notification_show_on_keyguard_summary">Ezen alkalmazáshoz tartozó értesítések megjelenítése a zárképernyőn</string>
@@ -1062,6 +1060,8 @@
   <string name="cm_radio_info_adb_log_off_label">ADB rádió napló bekapcsolása</string>
   <string name="cm_radio_info_diag_log_on_label">Diagnosztikai napló kikapcsolása</string>
   <string name="cm_radio_info_diag_log_off_label">Diagnosztikai napló bekapcsolása</string>
+  <!-- Lock screen wallpaper -->
+  <string name="lockscreen_wallpaper_title">Háttérkép</string>
   <string name="not_available_with_app">Nem érhető el ezzel: %1$s</string>
   <!-- Format string for fingerprint location message -->
   <string name="security_settings_fingerprint_enroll_find_sensor_message_cm">Keresse meg az ujjlenyomat érzékelőt a telefon <xliff:g id="sensor_location">%1$s</xliff:g>.</string>

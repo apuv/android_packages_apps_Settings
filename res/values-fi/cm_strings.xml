@@ -38,6 +38,9 @@
   <string name="root_access_apps">Vain sovellukset</string>
   <string name="root_access_adb">Vain ADB</string>
   <string name="root_access_all">Sovellukset ja ADB</string>
+  <!-- Preference link for root appops -->
+  <string name="root_appops_title">Hallitse root-oikeuksia</string>
+  <string name="root_appops_summary">Tarkastele ja hallinnoi root-sääntöjä</string>
   <!-- NFC PreferenceCategory title -->
   <string name="nfc_title_category">NFC</string>
   <!-- About phone screen, CyanogenMod version -->
@@ -54,6 +57,7 @@
   <string name="build_date">Luontipäivä</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">CyanogenMod-päivitykset</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">Päivitä Cyanogen Recovery</string>
   <string name="update_recovery_summary">Päivitä Recovery-tila järjestelmäpäivityksen aikana</string>
@@ -273,6 +277,7 @@
   <!-- Lights settings, LED notification -->
   <string name="led_notification_title">Valoasetukset</string>
   <string name="led_notification_text">LED-valo otettu käyttöön asetuksissa</string>
+  <string name="notification_light_no_apps_summary">Lisätäksesi sovelluskohtaisen hallinnan, ota \'%1$s\' käyttöön ja paina \'\u002b\' valikkopalkista</string>
   <!-- Setting checkbox title for Whether to enable Android debugging support on the phone. -->
   <string name="enable_adb_cm">Android-vianetsintä</string>
   <!-- Setting checkbox summary for Whether to enable Android debugging support on the phone -->
@@ -529,6 +534,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">Näytön navigointipalkki</string>
   <string name="disable_navkeys_summary">Ota näytön navigointipalkki käyttöön ja poista fyysiset näppäimet käytöstä</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">Herätys kaksoisnapautuksella</string>
+  <string name="double_tap_to_wake_summary">Herätä laitteen näyttö kaksoisnapautuksella</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">Lepotila kaksoisnapautuksella</string>
   <string name="double_tap_to_sleep_summary">Sulje laitteen näyttö tuplanapauttamalla tilapalkkia</string>
@@ -545,21 +553,13 @@
   <string name="volume_adjust_sounds_title">Äänenvoimakkuuden säädön merkkiääni</string>
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">Värinän voimakkuus</string>
-  <string name="vibrator_warning">Korkeampia arvoja kuin %1$d ei suositella</string>
+  <string name="vibrator_warning">Korkeampia arvoja kuin %1$d%% ei suositella</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">Värien kalibrointi</string>
   <string name="color_calibration_summary">Kalibroi näytön värit</string>
   <string name="color_red_title">Punainen</string>
   <string name="color_green_title">Vihreä</string>
   <string name="color_blue_title">Sininen</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">Gammakalibrointi</string>
-  <string name="gamma_tuning_summary_head">Muokkaa gamma-arvoja</string>
-  <string name="gamma_tuning_control_set_header">Ryhmä <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">Kontrasti</string>
-  <string name="gamma_tuning_brightness">Kirkkaus</string>
-  <string name="gamma_tuning_saturation">Kylläisyys</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">Käynnistä musiikkisovellus</string>
   <string name="headset_connect_player_summary">Käynnistä musiikkisovellus kytkettäessä kuulokkeet</string>
@@ -576,23 +576,6 @@
   <string name="display_rotation_90_title">90 astetta</string>
   <string name="display_rotation_180_title">180 astetta</string>
   <string name="display_rotation_270_title">270 astetta</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">Näytön väri</string>
-  <string name="screencolor_summary">Säädä näytön värisävyä, kontrastia ja intensiteettiä</string>
-  <string name="custom_screencolor">Mukautettu näytön väri</string>
-  <string name="screencolor_save">Tallenna</string>
-  <string name="screencolor_cancel">Peruuta</string>
-  <string name="restore_preview">Näytä oletuskuva</string>
-  <string name="selectnewfile_menu">Näytä uusi kuva Galleriasta</string>
-  <string name="selectfile_menu">Katso kuva Galleriasta</string>
-  <string name="restore_default_str">Palauta</string>
-  <string name="hue_str">Sävy: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">Kylläisyys: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">Kontrasti: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">Intensiteetti: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">Standardi</string>
-  <string name="screen_color_vivid">Eloisa</string>
-  <string name="screen_color_custom">Mukautettu</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">Optimoi näyttösi kellonajan ja ympäristöolosuhteiden perusteella parantaaksesi luettavuutta ja vähentääksesi silmien rasitusta</string>
   <string name="live_display_mode">Näyttötila</string>
@@ -622,6 +605,15 @@
   <string name="live_display_color_profile_photography_summary">Täydellinen värintoisto kuviin</string>
   <string name="live_display_color_profile_basic_title">Perus</string>
   <string name="live_display_color_profile_basic_summary">Käytä näyttöä kalibroimatta</string>
+  <string name="live_display_color_profile_adaptive_title">Mukautuva</string>
+  <string name="live_display_color_profile_adaptive_summary">Värit sopeutuu ympäristön mukaan</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="picture_adjustment_title">Kuvan säätö</string>
+  <string name="picture_adjustment_summary">Säädä värisävyä, kylläisyyttä, intensiteettiä ja kontrastia</string>
+  <string name="adj_hue_title">Värisävy</string>
+  <string name="adj_saturation_title">Kylläisyys</string>
+  <string name="adj_intensity_title">Intensiteetti</string>
+  <string name="adj_contrast_title">Kontrasti</string>
   <!-- Whether to display IME switcher notifcation -->
   <string name="ime_switcher_notify">Syöttötavan valinnan kuvake</string>
   <string name="ime_switcher_notify_summary">Näytä syöttötavan valinnan kuvake</string>
@@ -1042,6 +1034,12 @@
   <string name="restrict_cellular_access_summary">Poista datan käyttö mobiiliverkoissa</string>
   <string name="restrict_cellular_access_dialog_title">Rajoita mobiilidatan käyttöä?</string>
   <string name="restrict_cellular_access_dialog_summary">Tämä ominaisuus voi aiheuttaa verkkoyhteydestä riippuvaisen sovelluksen toiminnan lakkaamisen kun vain mobiilidataverkko on käytettävissä.\n\nLöydät lisää tiedonsiirron hallintaominaisuuksia sovelluksesta.</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <string name="shortcut_carrier_title">Verkko-operaattorit</string>
+  <!-- title for lock screen blur preference -->
+  <string name="lockscreen_blur_enabled_title">Sumennettu tausta</string>
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">Näytä sää</string>
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">Näytä lukitusnäytöllä</string>
   <string name="app_notification_show_on_keyguard_summary">Näytä tämän sovelluksen ilmoitukset lukitusnäytöllä</string>
@@ -1062,6 +1060,8 @@
   <string name="cm_radio_info_adb_log_off_label">Ota ADB radio log käyttöön</string>
   <string name="cm_radio_info_diag_log_on_label">Poista Diag log käytöstä</string>
   <string name="cm_radio_info_diag_log_off_label">Ota Diag log käyttöön</string>
+  <!-- Lock screen wallpaper -->
+  <string name="lockscreen_wallpaper_title">Taustakuva</string>
   <string name="not_available_with_app">Ei käytettävissä sovelluksessa %1$s</string>
   <!-- Format string for fingerprint location message -->
   <string name="security_settings_fingerprint_enroll_find_sensor_message_cm">Etsi sormenjälkitunnistin puhelimen <xliff:g id="sensor_location">%1$s</xliff:g>.</string>

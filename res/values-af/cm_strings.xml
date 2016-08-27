@@ -38,6 +38,7 @@
   <string name="root_access_apps">Slegs programme</string>
   <string name="root_access_adb">Slegs ADB</string>
   <string name="root_access_all">Programme en ADB</string>
+  <!-- Preference link for root appops -->
   <!-- NFC PreferenceCategory title -->
   <string name="nfc_title_category">NFC</string>
   <!-- About phone screen, CyanogenMod version -->
@@ -54,6 +55,7 @@
   <string name="build_date">Bou datum</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">CyanogenMod opgradering</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">Opdateer Cyanogen recovery</string>
   <string name="update_recovery_summary">Opdateer recovery met stelsel opdaterings</string>
@@ -528,6 +530,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">Aktiveer op skerm nav balk</string>
   <string name="disable_navkeys_summary">Aktiveer op skerm navigasie balk en skakel hardeware knoppies af</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">Klop-Klop wakker instelling</string>
+  <string name="double_tap_to_wake_summary">Dubbel klop op die skerm om dit aan te skakel</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">Klop-Klop om te slaap</string>
   <string name="double_tap_to_sleep_summary">Dubbel klop op die statusbalk om skerm af te skakel</string>
@@ -544,21 +549,12 @@
   <string name="volume_adjust_sounds_title">Volume verander klanke</string>
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">Vibrator intensiteit</string>
-  <string name="vibrator_warning">Waardes hoër as %1$d word nie aanbeveel nie</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">Kleur kalibrasie</string>
   <string name="color_calibration_summary">Kalibreer skerm kleure</string>
   <string name="color_red_title">Rooi</string>
   <string name="color_green_title">Groen</string>
   <string name="color_blue_title">Blou</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">Gamma kalibrasie</string>
-  <string name="gamma_tuning_summary_head">Verstel gamma waardes</string>
-  <string name="gamma_tuning_control_set_header">Groep <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">Kontras</string>
-  <string name="gamma_tuning_brightness">Helderheid</string>
-  <string name="gamma_tuning_saturation">Versadigingspunt</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">Begin musiek program</string>
   <string name="headset_connect_player_summary">Begin die standaard musiek program wanneer oorfone gekoppel word</string>
@@ -575,23 +571,6 @@
   <string name="display_rotation_90_title">90 grade</string>
   <string name="display_rotation_180_title">180 grade</string>
   <string name="display_rotation_270_title">270 grade</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">Skerm kleur</string>
-  <string name="screencolor_summary">Verander skerm kleur, versadiging, kontras of intensiteit</string>
-  <string name="custom_screencolor">Persoonlike skerm kleur</string>
-  <string name="screencolor_save">Stoor</string>
-  <string name="screencolor_cancel">Kanselleer</string>
-  <string name="restore_preview">Vertoon standaard foto</string>
-  <string name="selectnewfile_menu">Vertoon nuwe foto van Galery</string>
-  <string name="selectfile_menu">Vertoon foto vanuit Galery</string>
-  <string name="restore_default_str">Stel terug</string>
-  <string name="hue_str">Tint: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">Versadiging: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">Kontras: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">Intensiteit: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">Standaard</string>
-  <string name="screen_color_vivid">Lewendig</string>
-  <string name="screen_color_custom">Persoonlik</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">Optimaliseer jou skerm gebaseer op die tyd van die dag en die omringende omstandighede om leesbaarheid te verbeter en verminder oogspanning</string>
   <string name="live_display_mode">Skerm modus</string>
@@ -621,6 +600,9 @@
   <string name="live_display_color_profile_photography_summary">Perfekte kleur voortplanting vir foto\'s</string>
   <string name="live_display_color_profile_basic_title">Basies</string>
   <string name="live_display_color_profile_basic_summary">Gebruik die skerm ongekalibreerd</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="adj_saturation_title">Versadigingspunt</string>
+  <string name="adj_contrast_title">Kontras</string>
   <!-- Whether to display IME switcher notifcation -->
   <string name="ime_switcher_notify">Selektor ikoon</string>
   <string name="ime_switcher_notify_summary">Wys invoer metode selektor ikoon</string>
@@ -1016,6 +998,10 @@
   <string name="privacy_guard_internet_category">Internet</string>
   <!-- Weather -->
   <string name="weather_settings_general_settings_title">Algemeen</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <!-- title for lock screen blur preference -->
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">Wys weer</string>
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">Vertoon op slotskerm</string>
   <string name="app_notification_show_on_keyguard_summary">Vertoon kennisgewings vanuit hierdie program op die slotskerm</string>
@@ -1023,6 +1009,7 @@
   <string name="app_notification_no_ongoing_on_keyguard_summary">Moet nooit aanhoudende kennisgewings vertoon vanuit hierdie program op die slotskerm</string>
   <!-- CmRadioInfo -->
   <!-- Radio Control (IMS/MBN etc.) -->
+  <!-- Lock screen wallpaper -->
   <!-- Format string for fingerprint location message -->
   <!-- Fingerprint sensor locations -->
   <!-- SIM status format string -->

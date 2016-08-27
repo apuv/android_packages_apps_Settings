@@ -39,6 +39,7 @@
   <string name="root_access_apps">Толькі для дадаткаў</string>
   <string name="root_access_adb">Толькі для ADB</string>
   <string name="root_access_all">Для дадаткаў і ADB</string>
+  <!-- Preference link for root appops -->
   <!-- NFC PreferenceCategory title -->
   <string name="nfc_title_category">NFC</string>
   <!-- About phone screen, CyanogenMod version -->
@@ -55,6 +56,7 @@
   <string name="build_date">Дата зборкі</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">Абнаўленні сістэмы</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">Абнаўляць рэжым аднаўлення</string>
   <string name="update_recovery_summary">Перазапісваць падзел Recovery пры ўсталёўцы абнаўленняў</string>
@@ -528,6 +530,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">Экранныя кнопкі</string>
   <string name="disable_navkeys_summary">Уключыць панэль навігацыі і адключыць апаратныя сэнсорныя кнопкі</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">Улучэнне пры падвойным націсканні</string>
+  <string name="double_tap_to_wake_summary">Двойчы дакраніцеся экрана, каб вывесці прыладу са спячага рэжыму</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">Вымыкаць экран пры падвойным націсканні</string>
   <string name="double_tap_to_sleep_summary">Двойчы дакраніцеся радка стану, каб перавесці прыладу ў спячы рэжым</string>
@@ -544,21 +549,12 @@
   <string name="volume_adjust_sounds_title">Гук пры рэгулёўцы гучнасці</string>
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">Магутнасць вібрасігналу</string>
-  <string name="vibrator_warning">Усталёўка значэнняў ад %1$d і вышэй не рэкамендуецца</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">Колер</string>
   <string name="color_calibration_summary">Налада колераперадачы экрана</string>
   <string name="color_red_title">Чырвоны</string>
   <string name="color_green_title">Зялёны</string>
   <string name="color_blue_title">Сіні</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">Гама</string>
-  <string name="gamma_tuning_summary_head">Налада гама-карэкцыі экрана</string>
-  <string name="gamma_tuning_control_set_header">Група <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">Кантраснасць</string>
-  <string name="gamma_tuning_brightness">Яскравасць</string>
-  <string name="gamma_tuning_saturation">Насычанасць</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">Аўтазапуск плэера</string>
   <string name="headset_connect_player_summary">Запускаць плэер пры падлучэнні завушнікаў</string>
@@ -575,23 +571,6 @@
   <string name="display_rotation_90_title">90 градусаў</string>
   <string name="display_rotation_180_title">180 градусаў</string>
   <string name="display_rotation_270_title">270 градусаў</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">Колераперадача экрана</string>
-  <string name="screencolor_summary">Налада адцення, роўняў насычанасці і кантраснасці экрана</string>
-  <string name="custom_screencolor">Карыстальніцкая колераперадача</string>
-  <string name="screencolor_save">Захаваць</string>
-  <string name="screencolor_cancel">Скасаванне</string>
-  <string name="restore_preview">Стандартны значок</string>
-  <string name="selectnewfile_menu">Абраць новую выяву з \"Галерэі\"</string>
-  <string name="selectfile_menu">Абраць з \"Галерэі\"</string>
-  <string name="restore_default_str">Скід</string>
-  <string name="hue_str">Адценне: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">Насычанасць: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">Кантраснасць: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">Інтэнсіўнасць: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">Стандартны</string>
-  <string name="screen_color_vivid">Яскравы</string>
-  <string name="screen_color_custom">Уласная</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">Падладжваць экран на аснове часу сутак і асвятлення, каб палепшыць чытальнасць і зменшыць стомленасць вачэй</string>
   <string name="live_display_mode">Рэжым экрана</string>
@@ -621,6 +600,9 @@
   <string name="live_display_color_profile_photography_summary">Ідэальная колераперадача для фота</string>
   <string name="live_display_color_profile_basic_title">Асноўны</string>
   <string name="live_display_color_profile_basic_summary">Скарыстаць неадкалібраваны дысплей</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="adj_saturation_title">Насычанасць</string>
+  <string name="adj_contrast_title">Кантраснасць</string>
   <!-- Whether to display IME switcher notifcation -->
   <string name="ime_switcher_notify">Значок выбару метаду ўводу</string>
   <string name="ime_switcher_notify_summary">Адлюстроўваць пераключальнік метаду ўводу пры адкрыцці тэкставых палёў</string>
@@ -1015,6 +997,10 @@
   <string name="weather_settings_temp_celsius">Цэльсій</string>
   <string name="weather_settings_temp_fahrenheit">Фарэнгейт</string>
   <string name="weather_settings_keyword">надвор\'е</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <!-- title for lock screen blur preference -->
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">Звесткі пра надвор\'е</string>
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">На экране блакавання</string>
   <string name="app_notification_show_on_keyguard_summary">Паказваць апавяшчэнні з гэтага дадатку на экране блакавання</string>
@@ -1022,6 +1008,7 @@
   <string name="app_notification_no_ongoing_on_keyguard_summary">Не паказваць шторазовыя апавяшчэнні з гэтага дадатку на экране блакавання</string>
   <!-- CmRadioInfo -->
   <!-- Radio Control (IMS/MBN etc.) -->
+  <!-- Lock screen wallpaper -->
   <!-- Format string for fingerprint location message -->
   <!-- Fingerprint sensor locations -->
   <!-- SIM status format string -->

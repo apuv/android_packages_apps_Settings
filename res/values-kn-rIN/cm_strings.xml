@@ -38,6 +38,7 @@
   <string name="root_access_apps">ಆಪ್ಸ್ ಮಾತ್ರ</string>
   <string name="root_access_adb">ಎಡಿಬಿ ಮಾತ್ರ</string>
   <string name="root_access_all">ಆಪ್ಸ್ ಮತ್ತು ಎಡಿಬಿ</string>
+  <!-- Preference link for root appops -->
   <!-- NFC PreferenceCategory title -->
   <string name="nfc_title_category">ಎನ್ಎಫ್‍ಸಿ</string>
   <!-- About phone screen, CyanogenMod version -->
@@ -54,6 +55,7 @@
   <string name="build_date">ನಿರ್ಮಾಣ ದಿನಾಂಕ</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">CyanogenMod ನವೀಕರಣೆಗಳು</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">Cyanogen ರಿಕವರಿ ನವೀಕರಿಸು</string>
   <string name="update_recovery_summary">ಸಿಸ್ಟಂ ನವೀಕರಣೆಗಳೊಂದಿಗೆ ರಿಕವರಿಯನ್ನು ನವೀಕರಿಸು</string>
@@ -527,6 +529,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">ತೆರೆಯ-ಮೇಲಿನ ನಾವ್ ಬಾರ್ ಸಕ್ರಿಯಗೊಳಿಸು</string>
   <string name="disable_navkeys_summary">ತೆರೆಯ-ಮೇಲಿನ ನಾವ್ ಬಾರ್ ಸಕ್ರಿಯಗೊಳಿಸು ಮತ್ತು ಹಾರ್ಡ್‍ವೇರ್ ಬಟನ್‍ಗಳನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸು</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">ಎಬ್ಬಿಸಲು ದ್ವಿಗುಣ-ಸ್ಪರ್ಶ</string>
+  <string name="double_tap_to_wake_summary">ಪ್ರದರ್ಶನವನ್ನು ಆನ್ ಮಾಡಲು ಪರದೆಯ ಮೇಲೆ ದ್ವಿಗುಣ-ಸ್ಪರ್ಶಿಸಿ</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">ನಿದ್ರಿಸಲು ದ್ವಿಗುಣ-ಸ್ಪರ್ಶ</string>
   <string name="double_tap_to_sleep_summary">ಪ್ರದರ್ಶನವನ್ನು ಆಫ್ ಮಾಡಲು ಸ್ಟೇಟಸ್ ಬಾರ್‍ ಮೇಲೆ ದ್ವಿಗುಣ-ಸ್ಪರ್ಶಿಸಿ</string>
@@ -543,21 +548,12 @@
   <string name="volume_adjust_sounds_title">ವಾಲ್ಯೂಂ ಹೊಂದಾಣಿಕೆ ಶಬ್ಧಗಳು</string>
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">ಕಂಪಕ ತೀವ್ರತೆ</string>
-  <string name="vibrator_warning">%1$dಕಿಂತ ಹೆಚ್ಚಿನ ಮೌಲ್ಯಗಳು ಸೂಕ್ತವಲ್ಲ</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">ಬಣ್ಣ ಮಾಪನಾಂಕ</string>
   <string name="color_calibration_summary">ತೆರೆಯ-ಮೇಲಿನ ಬಣ್ಣಗಳನ್ನು ಮಾಪನಾಂಕಿಸಿ</string>
   <string name="color_red_title">ಕೆಂಪು</string>
   <string name="color_green_title">ಹಸಿರು</string>
   <string name="color_blue_title">ನೀಲಿ</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">ಗಾಮಾ ಮಾಪನಾಂಕ</string>
-  <string name="gamma_tuning_summary_head">ಗಾಮಾ ಮೌಲ್ಯಗಳನ್ನು ತಿರುಚಿ</string>
-  <string name="gamma_tuning_control_set_header">ಗುಂಪು <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">ಕಾಂಟ್ರಾಸ್ಟ್</string>
-  <string name="gamma_tuning_brightness">ಪ್ರಖರತೆ</string>
-  <string name="gamma_tuning_saturation">ಸ್ಯಾಚುರೇಶನ್</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">ಮ್ಯೂಸಿಕ್ ಆಪ್ ತೆರೆ</string>
   <string name="headset_connect_player_summary">ಹೆಡ್‍ಸೆಟ್ ಸಂಪರ್ಕಗೊಂಡಾಗ ಡೀಫಾಲ್ಟ್ ಮ್ಯೂಸಿಕ್ ಆಪ್ ಆರಂಭಿಸು</string>
@@ -574,23 +570,6 @@
   <string name="display_rotation_90_title">90 ಡಿಗ್ರಿ</string>
   <string name="display_rotation_180_title">180 ಡಿಗ್ರಿ</string>
   <string name="display_rotation_270_title">270 ಡಿಗ್ರಿ</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">ಪರದೆ ಬಣ್ಣ</string>
-  <string name="screencolor_summary">ಪರದೆ ವರ್ಣ, ಸ್ಯಾಚುರೇಶನ್, ಕಾಂಟ್ರಾಸ್ಟ್ ಅಥವ ತೀವ್ರತೆಯನ್ನು ಸರಿಹೊಂದಿಸಿ</string>
-  <string name="custom_screencolor">ಕಸ್ಟಮ್ ಪರದೆ ಬಣ್ಣ</string>
-  <string name="screencolor_save">ಉಳಿಸು</string>
-  <string name="screencolor_cancel">ರದ್ದು</string>
-  <string name="restore_preview">ಡೀಫಾಲ್ಟ್ ಫೋಟೋ ವೀಕ್ಷಿಸಿ</string>
-  <string name="selectnewfile_menu">ಹೊಸ ಫೋಟೋವನ್ನು ಗ್ಯಾಲರಿಯಿಂದ ವೀಕ್ಷಿಸಿ</string>
-  <string name="selectfile_menu">ಫೋಟೋವನ್ನು ಗ್ಯಾಲರಿಯಿಂದ ವೀಕ್ಷಿಸಿ</string>
-  <string name="restore_default_str">ಮರುಹೊಂದಿಸು</string>
-  <string name="hue_str">ವರ್ಣ: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">ಸ್ಯಾಚುರೇಶನ್: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">ಕಾಂಟ್ರಾಸ್ಟ್: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">ತೀವ್ರತೆ: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">ಸ್ಟಾಂಡರ್ಡ್</string>
-  <string name="screen_color_vivid">ಎದ್ದುಕಾಣುವ</string>
-  <string name="screen_color_custom">ಕಸ್ಟಮ್</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">ದಿನದ ಸಮಯ ಮತ್ತು ಆಂಬಿಯೆಂಟ್ ಪರಿಸ್ಥಿತಿಯನ್ನು ಆಧಾರಿಸಿ ನಿಮ್ಮ ಪರದೆಯನ್ನು ಆಪ್ಟಿಮೈಸ್ ಮಾಡುವುದರ ಮೂಲಕ ವಾಚನೀಯತೆಯನ್ನು ಉತ್ತಮಗೊಳಿಸುವುದರೊಂದಿಗೆ ಕಣ್ಣಿನ ಆಯಾಸವನ್ನು ಕಡಿಮೆ ಮಾಡಿ</string>
   <string name="live_display_mode">ಪ್ರದರ್ಶನ ಮೋಡ್</string>
@@ -620,6 +599,9 @@
   <string name="live_display_color_profile_photography_summary">ಫೊಟೋಗಳಿಗೆ ಪರಿಪೂರ್ಣ ಬಣ್ಣದ ಪುನರುತ್ಪಾದನೆ</string>
   <string name="live_display_color_profile_basic_title">ಮೂಲಭೂತ</string>
   <string name="live_display_color_profile_basic_summary">ಪ್ರದರ್ಶನವು ಅನ್ ಕ್ಯಾಲಿಬರೇಟೆಡ್ ಅನ್ನು ಉಪಯೋಗಿಸಿ</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="adj_saturation_title">ಸ್ಯಾಚುರೇಶನ್</string>
+  <string name="adj_contrast_title">ಕಾಂಟ್ರಾಸ್ಟ್</string>
   <!-- Whether to display IME switcher notifcation -->
   <string name="ime_switcher_notify">ಆಯ್ಕೆಮಾಡುವ ಐಕಾನ್</string>
   <string name="ime_switcher_notify_summary">ಇನ್ಪುಟ್ ವಿಧಾನ ಆಯ್ಕೆಮಾಡುವ ಐಕಾನ್ ಪ್ರದರ್ಶಿಸು</string>
@@ -1011,6 +993,10 @@
   <string name="battery_info_status_charging_dock_usb">ಡಾಕ್ ಯು‍ಎಸ್‍ಬಿಯ ಮೂಲಕ ಚಾರ್ಜ್ ಮಾಡಲಾಗುತ್ತಿದೆ</string>
   <!-- Weather -->
   <string name="weather_settings_general_settings_title">ಸಾಮಾನ್ಯ</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <!-- title for lock screen blur preference -->
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">ಹವಾಮಾನ ಪ್ರದರ್ಶಿಸು</string>
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">ಲಾಕ್ ಪರದೆಯಲ್ಲಿ ಪ್ರದರ್ಶಿಸು</string>
   <string name="app_notification_show_on_keyguard_summary">ಲಾಕ್ ಪರದೆಯಲ್ಲಿ ಈ ಆಪ್‍ನಿಂದ ಅಧಿಸೂಚನೆಗಳನ್ನು ಪ್ರದರ್ಶಿಸು</string>
@@ -1018,6 +1004,7 @@
   <string name="app_notification_no_ongoing_on_keyguard_summary">ಲಾಕ್ ಪರದೆಯಲ್ಲಿ ಎಂದಿಗೂ ಈ ಆಪ್‍ನಿಂದ ನಿರಂತರ ಅಧಿಸೂಚನೆಗಳನ್ನು ಪ್ರದರ್ಶಿಸಬೇಡ</string>
   <!-- CmRadioInfo -->
   <!-- Radio Control (IMS/MBN etc.) -->
+  <!-- Lock screen wallpaper -->
   <!-- Format string for fingerprint location message -->
   <!-- Fingerprint sensor locations -->
   <!-- SIM status format string -->

@@ -39,6 +39,7 @@ Vous êtes maintenant à <xliff:g id="step_count">%1$d</xliff:g> étapes de l\'a
   <string name="root_access_apps">Applications uniquement</string>
   <string name="root_access_adb">ADB uniquement</string>
   <string name="root_access_all">Applications et ADB</string>
+  <!-- Preference link for root appops -->
   <!-- NFC PreferenceCategory title -->
   <string name="nfc_title_category">NFC</string>
   <!-- About phone screen, CyanogenMod version -->
@@ -55,6 +56,7 @@ Vous êtes maintenant à <xliff:g id="step_count">%1$d</xliff:g> étapes de l\'a
   <string name="build_date">Date de compilation</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">Mises à jour CyanogenMod</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">Mettre à jour la récupération Cyanogen</string>
   <string name="update_recovery_summary">Mettre à jour la récupération avec les mises à jour système</string>
@@ -274,6 +276,7 @@ Vous êtes maintenant à <xliff:g id="step_count">%1$d</xliff:g> étapes de l\'a
   <!-- Lights settings, LED notification -->
   <string name="led_notification_title">Paramètres du voyant</string>
   <string name="led_notification_text">LED activée par les paramètres</string>
+  <string name="notification_light_no_apps_summary">Pour ajouter la gestion par application, activer \'%1$s\' et appuyer sur \'\u002b\' dans la barre de menu</string>
   <!-- Setting checkbox title for Whether to enable Android debugging support on the phone. -->
   <string name="enable_adb_cm">Débogage Android</string>
   <!-- Setting checkbox summary for Whether to enable Android debugging support on the phone -->
@@ -530,6 +533,9 @@ Vous êtes maintenant à <xliff:g id="step_count">%1$d</xliff:g> étapes de l\'a
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">Activer la barre de navigation à l\'écran</string>
   <string name="disable_navkeys_summary">Activer la barre de navigation à l\'écran et désactiver les touches physiques</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">Appui double pour réveiller</string>
+  <string name="double_tap_to_wake_summary">Appui double sur l\'écran pour l\'allumer</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">Appui double pour mettre en veille</string>
   <string name="double_tap_to_sleep_summary">Appui double sur la barre d\'état pour éteindre l\'écran</string>
@@ -546,21 +552,12 @@ Vous êtes maintenant à <xliff:g id="step_count">%1$d</xliff:g> étapes de l\'a
   <string name="volume_adjust_sounds_title">Son lors du réglage du volume</string>
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">Intensité du vibreur</string>
-  <string name="vibrator_warning">Les valeurs supérieures à %1$d ne sont pas recommandées</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">Calibrage des couleurs</string>
   <string name="color_calibration_summary">Calibrer les couleurs de l\'écran</string>
   <string name="color_red_title">Rouge</string>
   <string name="color_green_title">Vert</string>
   <string name="color_blue_title">Bleu</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">Calibrage du gamma</string>
-  <string name="gamma_tuning_summary_head">Ajuster les valeurs du gamma</string>
-  <string name="gamma_tuning_control_set_header">Groupe <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">Contraste</string>
-  <string name="gamma_tuning_brightness">Luminosité</string>
-  <string name="gamma_tuning_saturation">Saturation</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">Lancer le lecteur de musique</string>
   <string name="headset_connect_player_summary">Lancer le lecteur de musique par défaut au branchement du casque</string>
@@ -577,23 +574,6 @@ Vous êtes maintenant à <xliff:g id="step_count">%1$d</xliff:g> étapes de l\'a
   <string name="display_rotation_90_title">90 degrés</string>
   <string name="display_rotation_180_title">180 degrés</string>
   <string name="display_rotation_270_title">270 degrés</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">Couleur de l\'écran</string>
-  <string name="screencolor_summary">Régler la teinte, la saturation, le contraste ou l\'intensité de l\'écran</string>
-  <string name="custom_screencolor">Couleur d\'écran personnalisée</string>
-  <string name="screencolor_save">Enregistrer</string>
-  <string name="screencolor_cancel">Annuler</string>
-  <string name="restore_preview">Afficher l\'image par défaut</string>
-  <string name="selectnewfile_menu">Afficher la nouvelle image depuis la galerie</string>
-  <string name="selectfile_menu">Afficher l\'image depuis la galerie</string>
-  <string name="restore_default_str">Réinitialiser</string>
-  <string name="hue_str">Teinte : <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">Saturation : <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">Contraste : <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">Intensité : <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">Standard</string>
-  <string name="screen_color_vivid">Vive</string>
-  <string name="screen_color_custom">Personnalisée</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">Optimiser votre écran en fonction de l\'heure et des conditions ambiantes pour améliorer la lisibilité et réduire la fatigue oculaire</string>
   <string name="live_display_mode">Mode d\'affichage</string>
@@ -623,6 +603,10 @@ Vous êtes maintenant à <xliff:g id="step_count">%1$d</xliff:g> étapes de l\'a
   <string name="live_display_color_profile_photography_summary">Reproduction parfaite des couleurs pour les photos</string>
   <string name="live_display_color_profile_basic_title">Basique</string>
   <string name="live_display_color_profile_basic_summary">Utiliser l\'écran sans étalonnage</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="adj_saturation_title">Saturation</string>
+  <string name="adj_intensity_title">Intensité</string>
+  <string name="adj_contrast_title">Contraste</string>
   <!-- Whether to display IME switcher notifcation -->
   <string name="ime_switcher_notify">Icône du sélecteur</string>
   <string name="ime_switcher_notify_summary">Afficher l\'icône du sélecteur de mode de saisie</string>
@@ -1043,6 +1027,11 @@ Vous êtes maintenant à <xliff:g id="step_count">%1$d</xliff:g> étapes de l\'a
   <string name="restrict_cellular_access_summary">Désactiver l\'accès aux données sur les réseaux mobiles</string>
   <string name="restrict_cellular_access_dialog_title">Restreindre l\'accès aux données mobiles ?</string>
   <string name="restrict_cellular_access_dialog_summary">Cette fonctionnalité peut empêcher le fonctionnement d\'une appli dépendante d\'un accès au réseau lorsque seuls des réseaux mobiles sont disponibles.\n\nVous pouvez trouver des options plus appropriées de gestion de l\'utilisation des données dans les paramètres disponibles dans cette appli.</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <string name="shortcut_carrier_title">Opérateurs réseau</string>
+  <!-- title for lock screen blur preference -->
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">Afficher la météo</string>
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">Afficher sur l\'écran de verrouillage</string>
   <string name="app_notification_show_on_keyguard_summary">Afficher les notifications de cette application sur l\'écran de verrouillage</string>
@@ -1050,6 +1039,8 @@ Vous êtes maintenant à <xliff:g id="step_count">%1$d</xliff:g> étapes de l\'a
   <string name="app_notification_no_ongoing_on_keyguard_summary">Ne jamais afficher les notifications persistantes de cette application sur l\'écran de verrouillage</string>
   <!-- CmRadioInfo -->
   <!-- Radio Control (IMS/MBN etc.) -->
+  <!-- Lock screen wallpaper -->
+  <string name="lockscreen_wallpaper_title">Fond d\'écran</string>
   <!-- Format string for fingerprint location message -->
   <!-- Fingerprint sensor locations -->
   <!-- SIM status format string -->

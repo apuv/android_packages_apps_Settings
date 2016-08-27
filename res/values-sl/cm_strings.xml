@@ -40,6 +40,9 @@
   <string name="root_access_apps">Samo aplikacije</string>
   <string name="root_access_adb">Samo ADB</string>
   <string name="root_access_all">Aplikacije in ADB</string>
+  <!-- Preference link for root appops -->
+  <string name="root_appops_title">Upravljaj s skrbniškimi dostopi</string>
+  <string name="root_appops_summary">Ogled in nadzor skrbniških pravil</string>
   <!-- NFC PreferenceCategory title -->
   <string name="nfc_title_category">NFC</string>
   <!-- About phone screen, CyanogenMod version -->
@@ -56,6 +59,7 @@
   <string name="build_date">Datum izgradnje</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">Posodobitve CyanogenMod</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">Posodobi obnovitev Cyanogen</string>
   <string name="update_recovery_summary">Posodobi obnovitev s sistemskimi posodobitvami</string>
@@ -275,6 +279,7 @@
   <!-- Lights settings, LED notification -->
   <string name="led_notification_title">Nastavitve lučke</string>
   <string name="led_notification_text">Lučka LED omogočena v nastavitvah</string>
+  <string name="notification_light_no_apps_summary">Za dodajanje nadzora za posamezne aplikacije omogočite \'%1$s\' in pritisnite \'\u002b\' na menijski vrstici</string>
   <!-- Setting checkbox title for Whether to enable Android debugging support on the phone. -->
   <string name="enable_adb_cm">Razhroščevanje Android</string>
   <!-- Setting checkbox summary for Whether to enable Android debugging support on the phone -->
@@ -531,6 +536,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">Omogoči vrstico za krmarjenje na zaslonu</string>
   <string name="disable_navkeys_summary">Omogoči vrstico za krmarjenje na zaslonu in onemogoči fizične gumbe</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">Dvakrat tapnite za bujenje</string>
+  <string name="double_tap_to_wake_summary">Dvakrat tapnite na zaslon, da ga vklopite</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">Dvakrat tapnite za spanje</string>
   <string name="double_tap_to_sleep_summary">Dvakrat tapnite na vrstico stanja, da izklopite zaslon</string>
@@ -547,21 +555,13 @@
   <string name="volume_adjust_sounds_title">Zvoki za prilagoditev glasnosti</string>
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">Jakost vibriranja</string>
-  <string name="vibrator_warning">Vrednosti višje od %1$d niso priporočljive</string>
+  <string name="vibrator_warning">Vrednosti višje od %1$d %% niso priporočljive</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">Umerjanje barv</string>
   <string name="color_calibration_summary">Umeri barve na zaslonu</string>
   <string name="color_red_title">Rdeča</string>
   <string name="color_green_title">Zelena</string>
   <string name="color_blue_title">Modra</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">Umerjanje gama</string>
-  <string name="gamma_tuning_summary_head">Prilagodi vrednosti gama</string>
-  <string name="gamma_tuning_control_set_header">Skupina <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">Kontrast</string>
-  <string name="gamma_tuning_brightness">Svetlost</string>
-  <string name="gamma_tuning_saturation">Nasičenost</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">Zaženi aplikacijo za glasbo</string>
   <string name="headset_connect_player_summary">Zaženi privzeto aplikacijo za glasbo, ko so priključene slušalke</string>
@@ -578,23 +578,6 @@
   <string name="display_rotation_90_title">90 stopinj</string>
   <string name="display_rotation_180_title">180 stopinj</string>
   <string name="display_rotation_270_title">270 stopinj</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">Barva zaslona</string>
-  <string name="screencolor_summary">Naravnajte odtenek, nasičenost, kontrast in jakost zaslona</string>
-  <string name="custom_screencolor">Barva zaslona po meri</string>
-  <string name="screencolor_save">Shrani</string>
-  <string name="screencolor_cancel">Prekliči</string>
-  <string name="restore_preview">Pokaži privzeto sliko</string>
-  <string name="selectnewfile_menu">Pokaži novo sliko iz galerije</string>
-  <string name="selectfile_menu">Pokaži sliko iz galerije</string>
-  <string name="restore_default_str">Ponastavi</string>
-  <string name="hue_str">Odtenek: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">Nasičenost: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">Kontrast: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">Jakost: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">Običajno</string>
-  <string name="screen_color_vivid">Živahno</string>
-  <string name="screen_color_custom">Po meri</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">Optimiziraj zaslon glede na čas dneva in pogoje okolice, da se izboljša berljivost in zmanjša obremenitev oči</string>
   <string name="live_display_mode">Način prikaza</string>
@@ -624,6 +607,15 @@
   <string name="live_display_color_profile_photography_summary">Popolna izvedba barv za fotografije</string>
   <string name="live_display_color_profile_basic_title">Osnoven</string>
   <string name="live_display_color_profile_basic_summary">Uporabi neumerjen zaslon</string>
+  <string name="live_display_color_profile_adaptive_title">Prilagodljiv</string>
+  <string name="live_display_color_profile_adaptive_summary">Barve se prilagajajo pogojem okolice</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="picture_adjustment_title">Prilagoditev slike</string>
+  <string name="picture_adjustment_summary">Prilagodi odtenek, nasičenost, jakost in kontrast</string>
+  <string name="adj_hue_title">Odtenek</string>
+  <string name="adj_saturation_title">Nasičenost</string>
+  <string name="adj_intensity_title">Jakost</string>
+  <string name="adj_contrast_title">Kontrast</string>
   <!-- Whether to display IME switcher notifcation -->
   <string name="ime_switcher_notify">Ikona izbirnika</string>
   <string name="ime_switcher_notify_summary">Prikaži ikono izbirnika metode za vnos</string>
@@ -1051,6 +1043,12 @@
   <string name="restrict_cellular_access_summary">Onemogoči dostop do podatkov na mobilnem omrežju</string>
   <string name="restrict_cellular_access_dialog_title">Omeji dostop do mobilnih podatkov?</string>
   <string name="restrict_cellular_access_dialog_summary">Ta značilnost lahko povzroči, da aplikacija, ki je odvisna od dostopa do omrežja, preneha delovati, ko so na voljo samo mob. omrežja.\n\nPrimernejše nastavitve nadzora porabe podatkov lahko najdete v aplikaciji.</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <string name="shortcut_carrier_title">Omrežni operaterji</string>
+  <!-- title for lock screen blur preference -->
+  <string name="lockscreen_blur_enabled_title">Zamegli ozadje</string>
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">Prikaži vreme</string>
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">Prikaži na zaslonu za zakl.</string>
   <string name="app_notification_show_on_keyguard_summary">Na zaklenjenem zaslonu prikaži obvestila iz te aplikacije</string>
@@ -1071,6 +1069,8 @@
   <string name="cm_radio_info_adb_log_off_label">Vklopi dnevnik oddajnika ADB</string>
   <string name="cm_radio_info_diag_log_on_label">Izklopi dnevnik prepoz. težav</string>
   <string name="cm_radio_info_diag_log_off_label">Vklopi dnevnik prepoz. težav</string>
+  <!-- Lock screen wallpaper -->
+  <string name="lockscreen_wallpaper_title">Slika ozadja</string>
   <string name="not_available_with_app">Ni na voljo s/z %1$s</string>
   <!-- Format string for fingerprint location message -->
   <string name="security_settings_fingerprint_enroll_find_sensor_message_cm">Poiščite tipalo za prstne odtise na <xliff:g id="sensor_location">%1$s</xliff:g> vašega telefona.</string>

@@ -39,6 +39,9 @@
   <string name="root_access_apps">Только для приложений</string>
   <string name="root_access_adb">Только для ADB</string>
   <string name="root_access_all">Для приложений и ADB</string>
+  <!-- Preference link for root appops -->
+  <string name="root_appops_title">Права суперпользователя</string>
+  <string name="root_appops_summary">Просмотр и управление разрешениями для прав суперпользователя</string>
   <!-- NFC PreferenceCategory title -->
   <string name="nfc_title_category">NFC</string>
   <!-- About phone screen, CyanogenMod version -->
@@ -55,6 +58,7 @@
   <string name="build_date">Дата сборки</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">Обновления системы</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">Обновлять режим восстановления</string>
   <string name="update_recovery_summary">Перезаписывать прошивку режима восстановления при обновлении системы</string>
@@ -274,6 +278,7 @@
   <!-- Lights settings, LED notification -->
   <string name="led_notification_title">Индикатор событий</string>
   <string name="led_notification_text">Светодиод включен в настройках</string>
+  <string name="notification_light_no_apps_summary">Чтобы разрешить управление приложениями, включите «%1$s» и нажмите «\u002b» в строке меню.</string>
   <!-- Setting checkbox title for Whether to enable Android debugging support on the phone. -->
   <string name="enable_adb_cm">Режим отладки</string>
   <!-- Setting checkbox summary for Whether to enable Android debugging support on the phone -->
@@ -530,6 +535,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">Экранные кнопки</string>
   <string name="disable_navkeys_summary">Включить экранную панель навигации и отключить аппаратные кнопки</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">Включение при двойном нажатии</string>
+  <string name="double_tap_to_wake_summary">Дважды коснитесь экрана, чтобы вывести устройство из спящего режима</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">Выключать экран при двойном нажатии</string>
   <string name="double_tap_to_sleep_summary">Дважды коснитесь строки состояния, чтобы перевести устройство в спящий режим</string>
@@ -546,21 +554,13 @@
   <string name="volume_adjust_sounds_title">Звук при регулировке громкости</string>
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">Мощность вибросигнала</string>
-  <string name="vibrator_warning">Не рекомендуется устанавливать значения свыше %1$d</string>
+  <string name="vibrator_warning">Не рекомендуется устанавливать значения свыше %1$d%%</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">Цвет</string>
   <string name="color_calibration_summary">Настройка цветопередачи экрана</string>
   <string name="color_red_title">Красный</string>
   <string name="color_green_title">Зеленый</string>
   <string name="color_blue_title">Синий</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">Гамма</string>
-  <string name="gamma_tuning_summary_head">Настройка гамма-коррекции экрана</string>
-  <string name="gamma_tuning_control_set_header">Группа <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">Контрастность</string>
-  <string name="gamma_tuning_brightness">Яркость</string>
-  <string name="gamma_tuning_saturation">Насыщенность</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">Автозапуск плеера</string>
   <string name="headset_connect_player_summary">Запускать плеер при подключении наушников</string>
@@ -577,23 +577,6 @@
   <string name="display_rotation_90_title">90 градусов</string>
   <string name="display_rotation_180_title">180 градусов</string>
   <string name="display_rotation_270_title">270 градусов</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">Цветопередача экрана</string>
-  <string name="screencolor_summary">Настройка оттенка, уровней насыщенности и контрастности экрана</string>
-  <string name="custom_screencolor">Пользовательская цветопередача</string>
-  <string name="screencolor_save">Сохранить</string>
-  <string name="screencolor_cancel">Отмена</string>
-  <string name="restore_preview">Стандартный значок</string>
-  <string name="selectnewfile_menu">Выбрать новое изображение из «Галереи»</string>
-  <string name="selectfile_menu">Выбрать из «Галереи»</string>
-  <string name="restore_default_str">Сброс</string>
-  <string name="hue_str">Оттенок: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">Насыщенность: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">Контрастность: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">Интенсивность: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">Стандартный</string>
-  <string name="screen_color_vivid">Яркий</string>
-  <string name="screen_color_custom">Не задано</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">Подстраивать экран на основе времени суток и освещения, чтобы повысить удобочитаемость и снизить нагрузку на глаза</string>
   <string name="live_display_mode">Режим экрана</string>
@@ -623,6 +606,15 @@
   <string name="live_display_color_profile_photography_summary">Идеальная цветопередача для фото</string>
   <string name="live_display_color_profile_basic_title">Базовый</string>
   <string name="live_display_color_profile_basic_summary">Использовать неоткалиброванный дисплей</string>
+  <string name="live_display_color_profile_adaptive_title">Адаптивный</string>
+  <string name="live_display_color_profile_adaptive_summary">Цвета адаптируются к условиям окружающей среды</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="picture_adjustment_title">Регулировка изображения</string>
+  <string name="picture_adjustment_summary">Отрегулируйте оттенок, насыщенность, глубину и контрастность</string>
+  <string name="adj_hue_title">Оттенок</string>
+  <string name="adj_saturation_title">Насыщенность</string>
+  <string name="adj_intensity_title">Насыщенность</string>
+  <string name="adj_contrast_title">Контрастность</string>
   <!-- Whether to display IME switcher notifcation -->
   <string name="ime_switcher_notify">Значок выбора метода ввода</string>
   <string name="ime_switcher_notify_summary">Отображать переключатель метода ввода при открытии текстовых полей</string>
@@ -1043,6 +1035,12 @@
   <string name="restrict_cellular_access_summary">Отключение доступа к данным в сотовых сетях</string>
   <string name="restrict_cellular_access_dialog_title">Ограничить доступ к данным сотовой связи?</string>
   <string name="restrict_cellular_access_dialog_summary">Данная функция может приостановить работу приложений, использующих доступ к сети, если будут доступны только мобильные сети.\n\nДополнительные параметры управления использованием данных можно найти в настройках приложения.</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <string name="shortcut_carrier_title">Операторы сети</string>
+  <!-- title for lock screen blur preference -->
+  <string name="lockscreen_blur_enabled_title">Размытие фона</string>
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">Сведения о погоде</string>
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">На экране блокировки</string>
   <string name="app_notification_show_on_keyguard_summary">Показывать уведомления из этого приложения на экране блокировки</string>
@@ -1063,6 +1061,8 @@
   <string name="cm_radio_info_adb_log_off_label">Включить журнал радио ADB</string>
   <string name="cm_radio_info_diag_log_on_label">Отключить журнал диагностики</string>
   <string name="cm_radio_info_diag_log_off_label">Включить журнал диагностики</string>
+  <!-- Lock screen wallpaper -->
+  <string name="lockscreen_wallpaper_title">Обои</string>
   <string name="not_available_with_app">Недоступно с %1$s</string>
   <!-- Format string for fingerprint location message -->
   <string name="security_settings_fingerprint_enroll_find_sensor_message_cm">Сканер отпечатков пальцев расположен на <xliff:g id="sensor_location">%1$s </xliff:g> вашего телефона.</string>

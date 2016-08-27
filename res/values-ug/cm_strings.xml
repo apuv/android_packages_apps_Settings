@@ -37,6 +37,7 @@
   <string name="root_access_apps">ئەپلەرلا</string>
   <string name="root_access_adb">ADB لا</string>
   <string name="root_access_all">Apps ۋە ADB</string>
+  <!-- Preference link for root appops -->
   <!-- NFC PreferenceCategory title -->
   <string name="nfc_title_category">NFC</string>
   <!-- About phone screen, CyanogenMod version -->
@@ -53,6 +54,7 @@
   <string name="build_date">ھاسىللىغان چېسلا</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">CyanogenMod يېڭىلانمىلار</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">Cyanogen ئەسلىگە كەلتۈرۈش ھالىتىنى يېڭىلاش</string>
   <string name="update_recovery_summary">سىستېما يېڭىلانمىلىرى ئارقىلىق ئەسلىگە كەلتۈرۈشنى يېڭىلاش</string>
@@ -527,6 +529,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">ئېكراندىكى يولباشچى بالداقنى قوزغىتىدۇ</string>
   <string name="disable_navkeys_summary">ئېكراندىكى يولباشچى بالداقنى قوزغىتىپ قاتتىق دېتال توپچىنى چەكلەيدۇ</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">قوش چېكىلسە ئويغىتىدۇ</string>
+  <string name="double_tap_to_wake_summary">ئېكران قوش چېكىلسە ئېكراننى قوزغىتىدۇ</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">قوش چېكىلسە ئۇخلىتىدۇ</string>
   <string name="double_tap_to_sleep_summary">ئېكراننى تاقاش ئۈچۈن ھالەت بالداقنى قوش چېكىڭ</string>
@@ -543,21 +548,12 @@
   <string name="volume_adjust_sounds_title">ئاۋاز مىقدارىنى تەڭشەش ئەسكەرتىش ئاۋازى</string>
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">تىترەتكۈچ كۈچلۈكلۈكى</string>
-  <string name="vibrator_warning">قىممىتى %1$d دىن يۇقىرى بولۇشى تەۋسىيە قىلىنمايدۇ</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">رەڭ توغرىلاش</string>
   <string name="color_calibration_summary">ئېكراندىكى رەڭلەرنى توغرىلايدۇ</string>
   <string name="color_red_title">قىزىل</string>
   <string name="color_green_title">يېشىل</string>
   <string name="color_blue_title">كۆك</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">گامما توغرىلاش</string>
-  <string name="gamma_tuning_summary_head">گامما قىممىتىنى تەڭشەش</string>
-  <string name="gamma_tuning_control_set_header">گۇرۇپپا <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">ئاق-قارىلىقى</string>
-  <string name="gamma_tuning_brightness">يورۇقلۇق</string>
-  <string name="gamma_tuning_saturation">تويۇنۇش</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">نەغمە ئەپنى قوزغات</string>
   <string name="headset_connect_player_summary">تىڭشىغۇچ قىستۇرۇلغاندا كۆڭۈلدىكى نەغمە چالىدىغان ئەپنى قوزغىتىدۇ</string>
@@ -574,23 +570,6 @@
   <string name="display_rotation_90_title">90 گرادۇس</string>
   <string name="display_rotation_180_title">180 گرادۇس</string>
   <string name="display_rotation_270_title">270 گرادۇس</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">ئېكران رەڭگى</string>
-  <string name="screencolor_summary">رەڭ تۈسى، تويۇنۇشچانلىقى، ئاق-قارىلىقى ياكى يورۇقلۇقىنى تەڭشەيدۇ</string>
-  <string name="custom_screencolor">ئىختىيارىي ئېكران رەڭگى</string>
-  <string name="screencolor_save">ساقلا</string>
-  <string name="screencolor_cancel">ۋاز كەچ</string>
-  <string name="restore_preview">كۆڭۈلدىكى رەسىمنى كۆرسىتىدۇ</string>
-  <string name="selectnewfile_menu">رەسىم توپلىمىدىن يېڭى رەسىمنى كۆرسىتىدۇ</string>
-  <string name="selectfile_menu">رەسىم توپلىمىدىن رەسىمنى كۆرسىتىدۇ</string>
-  <string name="restore_default_str">ئەسلىگە قايتۇر</string>
-  <string name="hue_str">رەڭ تۈسى: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">تويۇنۇشچانلىقى: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">ئاق-قارىلىقى: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">يورۇقلۇقى: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">ئۆلچەملىك</string>
-  <string name="screen_color_vivid">جانلىق</string>
-  <string name="screen_color_custom">ئىختىيارىي</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">ۋاقىت ۋە مۇھىت شەرتى ئاساسىدا ئېكرانىڭىزنى ئەلالاشتۇرۇپ ئوقۇشچانلىقنى ياخشىلاپ كۆز چارچاشنى تۆۋەنلىتىدۇ</string>
   <string name="live_display_mode">كۆرسىتىش ھالىتى</string>
@@ -620,6 +599,9 @@
   <string name="live_display_color_profile_photography_summary">رەسىمنىڭ مۇكەممەل رەڭ بىلەن قايتا نامايەن بۇلۇشى</string>
   <string name="live_display_color_profile_basic_title">ئاساسىي</string>
   <string name="live_display_color_profile_basic_summary">تەڭشەلمىگەن ئېكران ئىشلىتىش</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="adj_saturation_title">تويۇنۇش</string>
+  <string name="adj_contrast_title">ئاق-قارىلىقى</string>
   <!-- Whether to display IME switcher notifcation -->
   <string name="ime_switcher_notify">تاللىغۇچ سىنبەلگىسى</string>
   <string name="ime_switcher_notify_summary">كىرگۈزگۈچ تاللىغۇچ سىنبەلگىسىنى كۆرسىتىدۇ</string>
@@ -1023,6 +1005,10 @@
   <string name="weather_settings_general_settings_title">ئادەتتىكى</string>
   <string name="reset_stats_confirm">جەزملەش</string>
   <string name="restrict_cellular_access_dialog_summary">كۆچمە تورغىلا باغلىنىدىغان ئەھۋالدا، بۇ ئىقتىدار تەگلىك سانلىق مەلۇماتىغا ئېھتىياجلىق پىروگراممىنىڭ خىزمەت قىلىشىنى توختىتىپ قويۇشى مۇمكىن.\n\nسىز شۇ ئەپنىڭ تەمىنلىگەن تەڭشىكىدىن سانلىق مەلۇمات ئېقىمىنى تىزگىنلەيدىغان تېخىمۇ مۇۋاپىق تاللانمىنى تاپالىشىڭىز مۇمكىن.</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <!-- title for lock screen blur preference -->
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">ھاۋارايىنى كۆرسەت</string>
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">قۇلۇپ ئېكراندا كۆرسىتىدۇ</string>
   <string name="app_notification_show_on_keyguard_summary">قۇلۇپ ئېكراندا بۇ ئەپنىڭ ئۇقتۇرۇشلىرىنى كۆرسىتىدۇ</string>
@@ -1030,6 +1016,7 @@
   <string name="app_notification_no_ongoing_on_keyguard_summary">قۇلۇپ ئېكراندا بۇ ئەپنىڭ دائىملىق ئۇقتۇرۇشىنى مەڭگۈ كۆرسەتمەيدۇ</string>
   <!-- CmRadioInfo -->
   <!-- Radio Control (IMS/MBN etc.) -->
+  <!-- Lock screen wallpaper -->
   <!-- Format string for fingerprint location message -->
   <!-- Fingerprint sensor locations -->
   <!-- SIM status format string -->

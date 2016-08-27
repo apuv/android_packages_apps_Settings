@@ -38,6 +38,7 @@
   <string name="root_access_apps">ફકત એપ્લિકેશન્સ</string>
   <string name="root_access_adb">ફક્ત ADB</string>
   <string name="root_access_all">એપ્લિકેશન્સ અને ADB</string>
+  <!-- Preference link for root appops -->
   <!-- NFC PreferenceCategory title -->
   <string name="nfc_title_category">NFC</string>
   <!-- About phone screen, CyanogenMod version -->
@@ -54,6 +55,7 @@
   <string name="build_date">બિલ્ડ તારીખ</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">CyanogenMod અપડેટો</string>
+    <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Settings switch for updating Cyanogen recovery -->
   <string name="update_recovery_title">Cyanogen રિકવરી અપડેટ કરો</string>
   <string name="update_recovery_summary">સિસ્ટમ અપડેટ્સથી રિકવરી અપડેટ કરો</string>
@@ -528,6 +530,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">ઑન સ્ક્રીન નૅવ બાર સક્ષમ કરો</string>
   <string name="disable_navkeys_summary">ઑન સ્ક્રીન નેવિગેશન પટ્ટી સક્ષમ કરો અને હાર્ડવેર બટન્સ અક્ષમ કરો</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">જગાવવા માટે ડબલ-ટૅપ કરો</string>
+  <string name="double_tap_to_wake_summary">પ્રદર્શન ચાલુ કરવા સ્ક્રીન પર ડબલ-ટૅપ કરો</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">સ્લીપ માટે ડબલ-ટૅપ કરો</string>
   <string name="double_tap_to_sleep_summary">પ્રદર્શન બંધ કરવા સ્ટેટસ બાર પર ડબલ-ટૅપ કરો</string>
@@ -544,21 +549,12 @@
   <string name="volume_adjust_sounds_title">વૉલ્યુમ સમાયોજન ધ્વનિ</string>
   <!-- Hardware tunables - Vibrator intensity -->
   <string name="vibrator_intensity_title">વાઇબ્રેટર તીવ્રતા</string>
-  <string name="vibrator_warning">%1$d કરતા વધુ મૂલ્યોની ભલામણ કરવામાં આવતી નથી</string>
   <!-- Hardware tunables - Color calibration -->
   <string name="color_calibration_title">રંગ અનુમાપન</string>
   <string name="color_calibration_summary">સ્ક્રીન રંગો પર અનુમાપન કરો</string>
   <string name="color_red_title">લાલ</string>
   <string name="color_green_title">લીલો</string>
   <string name="color_blue_title">વાદળી</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">ગામા અનુમાપન</string>
-  <string name="gamma_tuning_summary_head">ગામા મૂલ્યો મરડો</string>
-  <string name="gamma_tuning_control_set_header">જૂથ <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">વિપરીત</string>
-  <string name="gamma_tuning_brightness">તેજ</string>
-  <string name="gamma_tuning_saturation">સંતૃપ્તિ</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">મ્યુઝિક એપ્લિકેશન લૉન્ચ કરો</string>
   <string name="headset_connect_player_summary">જ્યારે હેડસેટ જોડાયેલ હોય ત્યારે ડિફૉલ્ટ મ્યુઝિક એપ્લિકેશન લૉન્ચ કરો</string>
@@ -575,23 +571,6 @@
   <string name="display_rotation_90_title">90 અંશ</string>
   <string name="display_rotation_180_title">180 અંશ</string>
   <string name="display_rotation_270_title">270 અંશ</string>
-  <!-- Display settings.  Screen color. -->
-  <string name="screencolor">સ્ક્રીન રંગ</string>
-  <string name="screencolor_summary">સ્ક્રીનના રંગ, સંતૃપ્તિ, કૉન્ટ્રાસ્ટ અથવા તીવ્રતાને ટ્યુન કરો</string>
-  <string name="custom_screencolor">કસ્ટમ સ્ક્રીન રંગ</string>
-  <string name="screencolor_save">સાચવો</string>
-  <string name="screencolor_cancel">રદ કરો</string>
-  <string name="restore_preview">ડિફૉલ્ટ ચિત્ર જુઓ</string>
-  <string name="selectnewfile_menu">ગૅલરીમાંથી નવું ચિત્ર જુઓ</string>
-  <string name="selectfile_menu">ગૅલરીમાંથી ચિત્ર જુઓ</string>
-  <string name="restore_default_str">ફરીથી સેટ કરો</string>
-  <string name="hue_str">રંગ: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">સંતૃપ્તિ: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">કૉન્ટ્રાસ્ટ: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">ઉત્કટતા: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
-  <string name="screen_color_standard">પ્રમાણભૂત</string>
-  <string name="screen_color_vivid">વિવિધ</string>
-  <string name="screen_color_custom">કસ્ટમ</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">વાંચન ક્ષમતામાં સુધારો લાવવા અને આંખો પરનો તાણ ઘટાડવા દિવસનો સમય અને વ્યાપક હવામાનનાં આધારે તમારા સ્ક્રીનને અનુકૂળ બનાવો</string>
   <string name="live_display_mode">પ્રદર્શન મોડ</string>
@@ -621,6 +600,9 @@
   <string name="live_display_color_profile_photography_summary">ફોટા માટે સચોટ રંગ પુન:નિર્મિતી</string>
   <string name="live_display_color_profile_basic_title">બેઝિક</string>
   <string name="live_display_color_profile_basic_summary">અનુમાપન કર્યા વિના પ્રદર્શનનો ઉપયોગ કરો</string>
+  <!-- LiveDisplay : Picture Adjustment -->
+  <string name="adj_saturation_title">સંતૃપ્તિ</string>
+  <string name="adj_contrast_title">વિપરીત</string>
   <!-- Whether to display IME switcher notifcation -->
   <string name="ime_switcher_notify">પસંદકર્તા આઇકૉન</string>
   <string name="ime_switcher_notify_summary">ઇનપુટ પદ્ધતિ પસંદકર્તા આઇકૉન દર્શાવો</string>
@@ -1011,6 +993,10 @@
   <string name="privacy_guard_internet_category">ઈન્ટરનેટ</string>
   <!-- Weather -->
   <string name="weather_settings_general_settings_title">સામાન્ય</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <!-- title for lock screen blur preference -->
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">હવામાન દર્શાવો</string>
   <!-- Per app controls for LP keyguard notifications -->
   <string name="app_notification_show_on_keyguard_title">લૉક ચાલુ સ્ક્રીન દર્શાવો</string>
   <string name="app_notification_show_on_keyguard_summary">લૉક સ્ક્રીન પર આ ઍપમાંથી સૂચનાઓ દર્શાવો</string>
@@ -1018,6 +1004,7 @@
   <string name="app_notification_no_ongoing_on_keyguard_summary">લૉક સ્ક્રીન પર આ ઍપમાંથી નિરંતર સૂચનાઓ ક્યારેય દર્શાવવા નહીં</string>
   <!-- CmRadioInfo -->
   <!-- Radio Control (IMS/MBN etc.) -->
+  <!-- Lock screen wallpaper -->
   <!-- Format string for fingerprint location message -->
   <!-- Fingerprint sensor locations -->
   <!-- SIM status format string -->
