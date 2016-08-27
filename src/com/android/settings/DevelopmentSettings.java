@@ -79,12 +79,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.internal.logging.MetricsLogger;
+import com.android.settings.Settings.AppOpsSummaryActivity;
 import com.android.settings.fuelgauge.InactiveApps;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 import com.android.settings.widget.SwitchBar;
 import cyanogenmod.providers.CMSettings;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -177,6 +179,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private static final String ROOT_ACCESS_KEY = "root_access";
     private static final String ROOT_ACCESS_PROPERTY = "persist.sys.root_access";
 
+    private static final String ROOT_APPOPS_KEY = "root_appops";
+
     private static final String UPDATE_RECOVERY_KEY = "update_recovery";
     private static final String UPDATE_RECOVERY_PROPERTY = "persist.sys.recovery_update";
 
@@ -210,6 +214,9 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private static final int[] MOCK_LOCATION_APP_OPS = new int[] {AppOpsManager.OP_MOCK_LOCATION};
 
     private static final String MULTI_WINDOW_SYSTEM_PROPERTY = "persist.sys.debug.multi_window";
+
+    private static final String SUPERUSER_BINARY_PATH = "/system/xbin/su";
+
     private IWindowManager mWindowManager;
     private IBackupManager mBackupManager;
     private DevicePolicyManager mDpm;
@@ -287,6 +294,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private Object mSelectedRootValue;
     private PreferenceScreen mDevelopmentTools;
     private ColorModePreference mColorModePreference;
+
+    private Preference mRootAppops;
 
     private SwitchPreference mAdvancedReboot;
 
@@ -473,8 +482,20 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
         mRootAccess = (ListPreference) findPreference(ROOT_ACCESS_KEY);
         mRootAccess.setOnPreferenceChangeListener(this);
+
+        mRootAppops = (Preference) findPreference(ROOT_APPOPS_KEY);
+        mRootAppops.setOnPreferenceClickListener(this);
+
         if (!removeRootOptionsIfRequired()) {
+            if (isRootForAppsAvailable()) {
+                mRootAccess.setEntries(R.array.root_access_entries);
+                mRootAccess.setEntryValues(R.array.root_access_values);
+            } else {
+                mRootAccess.setEntries(R.array.root_access_entries_adb);
+                mRootAccess.setEntryValues(R.array.root_access_values_adb);
+            }
             mAllPrefs.add(mRootAccess);
+            mAllPrefs.add(mRootAppops);
         }
 
         mDevelopmentTools = (PreferenceScreen) findPreference(DEVELOPMENT_TOOLS);
@@ -830,6 +851,21 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         mRootAccess.setValue(value);
         mRootAccess.setSummary(getResources()
                 .getStringArray(R.array.root_access_entries)[Integer.valueOf(value)]);
+
+        if (mRootAppops != null) {
+            mRootAppops.setEnabled(isRootForAppsEnabled());
+        }
+    }
+
+    private boolean isRootForAppsAvailable() {
+        boolean exists = false;
+        try {
+            File f = new File(SUPERUSER_BINARY_PATH);
+            exists = f.exists();
+        } catch (SecurityException e) {
+            // Ignore
+        }
+        return exists;
     }
 
     public static boolean isRootForAppsEnabled() {
@@ -845,10 +881,10 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         if (Integer.valueOf(newValue.toString()) < 2 && !oldValue.equals(newValue)
                 && "1".equals(SystemProperties.get("service.adb.root", "0"))) {
             SystemProperties.set("service.adb.root", "0");
-            Settings.Secure.putInt(getActivity().getContentResolver(),
-                    Settings.Secure.ADB_ENABLED, 0);
-            Settings.Secure.putInt(getActivity().getContentResolver(),
-                    Settings.Secure.ADB_ENABLED, 1);
+            Settings.Global.putInt(getActivity().getContentResolver(),
+                    Settings.Global.ADB_ENABLED, 0);
+            Settings.Global.putInt(getActivity().getContentResolver(),
+                    Settings.Global.ADB_ENABLED, 1);
         }
         updateRootAccessOptions();
     }
@@ -858,10 +894,10 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         SystemProperties.set(ROOT_ACCESS_PROPERTY, "0");
         if (!oldValue.equals("0") && "1".equals(SystemProperties.get("service.adb.root", "0"))) {
             SystemProperties.set("service.adb.root", "0");
-            Settings.Secure.putInt(getActivity().getContentResolver(),
-                    Settings.Secure.ADB_ENABLED, 0);
-            Settings.Secure.putInt(getActivity().getContentResolver(),
-                    Settings.Secure.ADB_ENABLED, 1);
+            Settings.Global.putInt(getActivity().getContentResolver(),
+                    Settings.Global.ADB_ENABLED, 0);
+            Settings.Global.putInt(getActivity().getContentResolver(),
+                    Settings.Global.ADB_ENABLED, 1);
         }
         updateRootAccessOptions();
     }
@@ -1792,6 +1828,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
                 .setMessage(R.string.confirm_enable_multi_window_text)
                 .setPositiveButton(R.string.enable_text, onConfirmListener)
                 .setNegativeButton(android.R.string.cancel, onConfirmListener)
+                .setCancelable(false)
                 .create()
                 .show();
     }
@@ -1887,6 +1924,13 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
                 preference == mTransitionAnimationScale ||
                 preference == mAnimatorDurationScale) {
             ((AnimationScalePreference) preference).click();
+        } else if (preference == mRootAppops) {
+            Activity mActivity = getActivity();
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.putExtra("appops_tab", getString(R.string.app_ops_categories_su));
+            intent.setClass(mActivity, AppOpsSummaryActivity.class);
+            mActivity.startActivity(intent);
+            return true;
         }
         return false;
     }

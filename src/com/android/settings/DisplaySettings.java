@@ -53,8 +53,6 @@ import android.app.UiModeManager;
 import android.app.admin.DevicePolicyManager;
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.hardware.Sensor;
@@ -85,7 +83,9 @@ import java.util.ArrayList;
 import java.util.List;
 import com.android.settings.Utils;
 import com.android.settings.cyanogenmod.DisplayRotation;
+
 import cyanogenmod.hardware.CMHardwareManager;
+import cyanogenmod.hardware.LiveDisplayManager;
 import cyanogenmod.providers.CMSettings;
 
 public class DisplaySettings extends SettingsPreferenceFragment implements
@@ -114,6 +114,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_WAKE_WHEN_PLUGGED_OR_UNPLUGGED = "wake_when_plugged_or_unplugged";
     private static final String KEY_NOTIFICATION_LIGHT = "notification_light";
     private static final String KEY_BATTERY_LIGHT = "battery_light";
+    private static final String KEY_LIVEDISPLAY = "live_display";
     private static final String KEY_HIGH_TOUCH_SENSITIVITY = "high_touch_sensitivity";
 
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
@@ -121,6 +122,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private ListPreference mLcdDensityPreference;
     private FontDialogPreference mFontSizePref;
     private PreferenceScreen mDisplayRotationPreference;
+    private PreferenceScreen mLiveDisplayPreference;
 
     private final Configuration mCurConfig = new Configuration();
 
@@ -178,6 +180,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mAccelerometer = (SwitchPreference) findPreference(DisplayRotation.KEY_ACCELEROMETER);
         if (mAccelerometer != null) {
             mAccelerometer.setPersistent(false);
+        }
+
+        mLiveDisplayPreference = (PreferenceScreen) findPreference(KEY_LIVEDISPLAY);
+        if (!LiveDisplayManager.getInstance(getActivity()).getConfig().isAvailable()) {
+            displayPrefs.removePreference(mLiveDisplayPreference);
         }
 
         mScreenSaverPreference = findPreference(KEY_SCREEN_SAVER);

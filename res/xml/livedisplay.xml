@@ -44,7 +44,7 @@
                 android:key="display_auto_outdoor_mode"
                 android:title="@string/live_display_outdoor_mode_title"
                 android:summary="@string/live_display_outdoor_mode_summary"
-                android:defaultValue="true" />
+                android:defaultValue="@*cyanogenmod.platform:bool/config_defaultAutoOutdoorMode" />
 
     </PreferenceCategory>
 
@@ -52,18 +52,7 @@
             android:key="advanced"
             android:title="@string/advanced">
 
-        <!-- screen color -->
-        <PreferenceScreen
-                android:persistent="false"
-                android:key="screencolor_settings"
-                android:title="@string/screencolor"
-                android:summary="@string/screencolor_summary">
-            <intent
-                    android:action="com.qualcomm.display.PPService"
-                    android:targetPackage="com.android.settings"
-                    android:targetClass="com.android.settings.ScreenColorSettings" />
-        </PreferenceScreen>
-
+        <!-- RGB display color adjustments -->
         <com.android.settings.livedisplay.DisplayColor
                 android:key="color_calibration"
                 android:title="@string/color_calibration_title"
@@ -71,11 +60,12 @@
                 android:summary="@string/color_calibration_summary"
                 android:persistent="false"/>
 
-        <com.android.settings.livedisplay.DisplayGamma
-                android:key="gamma_tuning"
-                android:title="@string/gamma_tuning_title_head"
-                android:dialogTitle="@string/gamma_tuning_title_head"
-                android:summary="@string/gamma_tuning_summary_head"
+        <!-- HSIC display color adjustments -->
+        <com.android.settings.livedisplay.PictureAdjustment
+                android:key="picture_adjustment"
+                android:title="@string/picture_adjustment_title"
+                android:dialogTitle="@string/picture_adjustment_title"
+                android:summary="@string/picture_adjustment_summary"
                 android:persistent="false"/>
 
         <!-- Adaptive backlight -->
@@ -83,14 +73,14 @@
                 android:key="display_low_power"
                 android:title="@string/live_display_low_power_title"
                 android:summary="@string/live_display_low_power_summary"
-                android:defaultValue="true" />
+                android:defaultValue="@*cyanogenmod.platform:bool/config_defaultCABC" />
 
         <!-- Color enhancement -->
         <com.android.settings.cyanogenmod.CMSystemSettingSwitchPreference
                 android:key="display_color_enhance"
                 android:title="@string/live_display_enhance_color_title"
                 android:summary="@string/live_display_enhance_color_summary"
-                android:defaultValue="true" />
+                android:defaultValue="@*cyanogenmod.platform:bool/config_defaultColorEnhancement" />
 
     </PreferenceCategory>
 

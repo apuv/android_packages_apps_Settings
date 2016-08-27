@@ -125,6 +125,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private static final String KEY_SMS_SECURITY_CHECK_PREF = "sms_security_check_limit";
     private static final String KEY_GENERAL_CATEGORY = "general_category";
     private static final String KEY_LIVE_LOCK_SCREEN = "live_lock_screen";
+    private static final String KEY_LOCK_SCREEN_BLUR = CMSettings.Secure.LOCK_SCREEN_BLUR_ENABLED;
 
     // These switch preferences need special handling since they're not all stored in Settings.
     private static final String SWITCH_PREFERENCE_KEYS[] = { KEY_LOCK_AFTER_TIMEOUT,
@@ -195,7 +196,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
 
         Bundle extras = getActivity().getIntent().getExtras();
         // Even uglier hack to make cts verifier expectations make sense.
-        if (extras.get(SettingsActivity.EXTRA_SHOW_FRAGMENT_ARGUMENTS) != null &&
+        if (extras != null && extras.get(SettingsActivity.EXTRA_SHOW_FRAGMENT_ARGUMENTS) != null &&
                 extras.get(SettingsActivity.EXTRA_SHOW_FRAGMENT_AS_SHORTCUT) == null) {
             mFilterType = TYPE_EXTERNAL_RESOLUTION;
         }
@@ -358,6 +359,14 @@ public class SecuritySettings extends SettingsPreferenceFragment
                 liveLockPreference.setOrder(-1);
                 setLiveLockScreenPreferenceTitleAndSummary(liveLockPreference);
                 groupToAddTo.addPreference(liveLockPreference);
+            }
+
+            // only show blur setting for devices that support it
+            boolean blurSupported = getResources().getBoolean(
+                    com.android.internal.R.bool.config_ui_blur_enabled);
+            if (!blurSupported && generalCategory != null) {
+                Preference blurEnabledPref = generalCategory.findPreference(KEY_LOCK_SCREEN_BLUR);
+                if (blurEnabledPref != null) generalCategory.removePreference(blurEnabledPref);
             }
         }
 
@@ -1001,20 +1010,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
                 result.add(data);
             }
 
-            // Advanced
-            final LockPatternUtils lockPatternUtils = new LockPatternUtils(context);
-            if (lockPatternUtils.isSecure(MY_USER_ID)) {
-                ArrayList<TrustAgentComponentInfo> agents =
-                        getActiveTrustAgents(context.getPackageManager(), lockPatternUtils,
-                                context.getSystemService(DevicePolicyManager.class));
-                for (int i = 0; i < agents.size(); i++) {
-                    final TrustAgentComponentInfo agent = agents.get(i);
-                    data = new SearchIndexableRaw(context);
-                    data.title = agent.title;
-                    data.screenTitle = screenTitle;
-                    result.add(data);
-                }
-            }
+
             return result;
         }
 
@@ -1023,8 +1019,6 @@ public class SecuritySettings extends SettingsPreferenceFragment
             final List<String> keys = new ArrayList<String>();
 
             LockPatternUtils lockPatternUtils = new LockPatternUtils(context);
-            // Add options for lock/unlock screen
-            int resId = getResIdForLockUnlockScreen(context, lockPatternUtils);
 
             // Do not display SIM lock for devices without an Icc card
             TelephonyManager tm = TelephonyManager.getDefault();
