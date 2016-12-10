@@ -7912,4 +7912,8 @@
 
     <!-- Warning when activating the automatic storage manager on legacy devices. [CHAR LIMIT=NONE] -->
     <string name="automatic_storage_manager_activation_warning">Your storage is now being managed by the storage manager</string>
+
+    <!--ChangeLog-->
+    <string name ="changelog_title">ChangeLog</string>
+    <string name ="changelog_error">ChangeLog not found</string>
 </resources>

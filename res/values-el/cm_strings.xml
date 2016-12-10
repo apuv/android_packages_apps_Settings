@@ -52,6 +52,7 @@
   <string name="build_date">Ημερομηνία έκδοσης</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">Ενημερώσεις CyanogenMod</string>
+  <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Names of categories of app ops tabs - extension of AOSP -->
   <string name="app_ops_categories_location">Τοποθεσία</string>
   <string name="app_ops_categories_personal">Προσωπικά</string>

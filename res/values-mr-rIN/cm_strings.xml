@@ -50,6 +50,7 @@
   <string name="build_date">बांधणी तारीख</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">CyanogenMod अद्यतने</string>
+  <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Names of categories of app ops tabs - extension of AOSP -->
   <string name="app_ops_categories_location">स्थान</string>
   <string name="app_ops_categories_personal">वैयक्तिक</string>

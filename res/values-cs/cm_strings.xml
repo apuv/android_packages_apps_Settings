@@ -53,6 +53,7 @@
   <string name="build_date">Datum sestavení</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">Aktualizace CyanogenMod</string>
+  <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Names of categories of app ops tabs - extension of AOSP -->
   <string name="app_ops_categories_location">Poloha</string>
   <string name="app_ops_categories_personal">Osobní</string>

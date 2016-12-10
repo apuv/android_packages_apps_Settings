@@ -51,6 +51,7 @@
   <string name="build_date">Byggdatum</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">CyanogenMod-uppdateringar</string>
+  <string name="deltaupdate_settings_title">YACMR Delta updates</string>
   <!-- Names of categories of app ops tabs - extension of AOSP -->
   <string name="app_ops_categories_location">Plats</string>
   <string name="app_ops_categories_personal">Personligt</string>
