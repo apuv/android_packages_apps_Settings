@@ -34,11 +34,12 @@ import android.os.UserHandle;
 import android.os.UserManager;
 //import android.preference.Preference;
 //import android.preference.PreferenceGroup;
-import android.preference.PreferenceScreen;
+//import android.preference.PreferenceScreen;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceGroup;
+import android.support.v7.preference.PreferenceScreen
 import android.telephony.CarrierConfigManager;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
